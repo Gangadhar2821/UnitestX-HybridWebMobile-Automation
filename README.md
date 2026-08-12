@@ -81,9 +81,10 @@ To clone the repository from **GitHub**:
    **Example**  
    ```bash
    cd D:/Eclipse-Workspace
-   
+   ```
 3. Run the `git clone` command with your repository URL:
 
+ ```bash
 "git clone https://github.com/Gangadhar2821/UniTestX.git"
   ```
 
