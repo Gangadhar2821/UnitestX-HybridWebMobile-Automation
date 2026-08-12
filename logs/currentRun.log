@@ -1,0 +1,11 @@
+2026-08-12 14:53:46 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-12 14:53:46 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-12 14:53:54 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-12 14:53:54 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-12 15:34:54 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-12 15:34:55 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-12 15:34:55 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-12 15:35:53 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-12 15:35:53 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-12 15:35:59 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-12 15:35:59 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
