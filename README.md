@@ -101,7 +101,7 @@ After cloning, the project will be available in your local workspace.
 For example:  
 [D:\Eclipse - Workspace](D:\Eclipse - Workspace)
 
-#####1. Import Project into Eclipse IDE
+## 1. Import Project into Eclipse IDE
 
 1. Open Eclipse IDE.
 2. Go to File → Import.
@@ -111,7 +111,7 @@ For example:
 
 This step ensures Eclipse recognizes the project as a Maven project.
 
-#####2. Install Maven Dependencies
+## 2. Install Maven Dependencies
 Once the project is imported, you need to download and update all Maven dependencies.
 
 1. Open Command Prompt (CMD).
