@@ -42,156 +42,44 @@ public class MobileAutomationUtils {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 	}
 
-	public static void clickElement(String xpath) {
+	public static void clickElement(WebElement element) {
 
 		try {
-			String normalizedXpath = xpath.toUpperCase();
+			WebElement readyElement = waitForVisibility(element);
+			readyElement.click();
 
-			// Define supported button texts
-			List<String> buttonLabels = Arrays.asList("NEXT", "SUBMIT", "DEDUPE CHECK", "PROCEED");
-			for (String label : buttonLabels) {
-				if (normalizedXpath.contains(label)) {
-					scrollToElementByText(label);
-					break; // Exit once matched
-				}
-			}
-			WebElement element = waitForClickable(xpath);
-			element.click();
 		} catch (Exception e) {
-			throw new RuntimeException("Failed to click on mobile element: " + xpath);
+			log.error("Failed to click on: " + element, e);
+			throw new RuntimeException(e.getMessage());
 		}
 	}
 
-	public static void sendKeysToElement(String xpath, String keys) {
+	public static void sendKeysToElement(WebElement element, String keys) {
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
 
 		int maxScrolls = 5;
 		int scrollCount = 0;
+
 		while (scrollCount < maxScrolls) {
 			try {
-				WebElement element = null;
-				try {
-					element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-				} catch (Exception e) {
+				WebElement visibleElement = wait.until(ExpectedConditions.visibilityOf(element));
 
-				}
-				if (element != null) {
-					element.clear();
-					element.sendKeys(keys);
+				if (visibleElement != null) {
+					visibleElement.clear();
+					visibleElement.sendKeys(keys);
 					return;
 				}
-			} catch (NoSuchElementException e) {
+
+			} catch (Exception e) {
+				// Element not visible yet, continue scrolling
 			}
+
 			scrollDown();
 			scrollCount++;
 		}
 
-	}
-
-	public static void waitAndClick(WebElement ele, int time) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
-		try {
-			wait.until(ExpectedConditions.elementToBeClickable(ele)).click();
-
-		} catch (TimeoutException e) {
-			scrollDown();
-			wait.until(ExpectedConditions.elementToBeClickable(ele)).click();
-
-		}
-	}
-
-	/**
-	 * @author gangadhar.b
-	 * @param eleXpath is the Drop down element
-	 * @param data     is the option to be selected from drop down and "any" opts
-	 *                 for 1st value
-	 * @throws Exception
-	 * 
-	 */
-	public static void selectOption(String eleXpath, String data) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
-		try {
-			WebElement dropdown = null;
-			for (int i = 0; i < 10; i++) {
-				try {
-					dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(eleXpath)));
-					MobileAutomationUtils.waitAndClick(dropdown, 4);
-					break;
-				} catch (Exception e) {
-					scrollDown();
-					try {
-						MobileAutomationUtils.waitAndClick(dropdown, 4);
-						break;
-					} catch (Exception e2) {
-					}
-				}
-			}
-
-			boolean found = false;
-			for (int i = 0; i < 5; i++) {
-				try {
-
-					List<WebElement> options = driver
-							.findElements(By.xpath("//android.view.ViewGroup//android.widget.TextView"));
-					if (options.isEmpty()) {
-						options = driver
-								.findElements(By.xpath("//android.view.ViewGroup[@content-desc!='Please Select']"));
-
-					}
-					if (options.isEmpty()) {
-						options = driver.findElements(By.xpath("//android.widget.ListView/android.view.View"));
-
-					}
-					for (WebElement option : options) {
-						String optText = option.getAttribute("content-desc").trim();
-						if (optText == null || optText.trim().isEmpty() || optText.equalsIgnoreCase("null")) {
-							optText = option.getAttribute("text").trim();
-						}
-						if (optText.equalsIgnoreCase(data)) {
-							option.click();
-							found = true;
-							break;
-						} else if (!optText.isEmpty() & data.equalsIgnoreCase("any")
-								& !optText.contains("Please Select") && !optText.contains("Select")) {
-							option.click();
-							found = true;
-							break;
-						}
-					}
-					if (found)
-						break;
-				} catch (StaleElementReferenceException se) {
-
-				} catch (Exception e) {
-					throw new RuntimeException("Failed to handle the Dropdown!");
-				}
-				Thread.sleep(200);
-			}
-
-			if (!found) {
-				log.info("No Options found!");
-				throw new RuntimeException();
-			}
-
-		} catch (Exception e) {
-			throw new RuntimeException();
-
-		}
-
-	}
-
-	/**
-	 * Searches for an element and returns the same
-	 *
-	 * @param xpath XPath of the element.
-	 * @return WebElement
-	 */
-	public static WebElement findElement(String xpath) {
-		try {
-			return driver.findElement(By.xpath(xpath));
-		} catch (NoSuchElementException e) {
-			throw new RuntimeException("Element not found. XPath: " + xpath, e);
-		}
+		throw new RuntimeException("Failed to enter text into mobile element after " + maxScrolls + " scrolls.");
 	}
 
 	public static void handleLoader() {
@@ -255,98 +143,6 @@ public class MobileAutomationUtils {
 		}
 	}
 
-	public static void waitAndClick(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
-		try {
-			int maxScrolls = 5;
-			int scrollCount = 0;
-			while (scrollCount < maxScrolls) {
-				try {
-					WebElement ele = null;
-					try {
-						ele = wait.until(ExpectedConditions.visibilityOf(element));
-					} catch (Exception e) {
-					}
-					if (ele != null) {
-						ele.click();
-						return;
-					}
-				} catch (NoSuchElementException e) {
-				}
-				scrollDown();
-				scrollCount++;
-			}
-
-		} catch (Exception e) {
-
-		}
-	}
-
-	public static void uploadImgOrDoc(WebElement uploadDocsBtn) {
-		String cameraIcon = "//android.widget.TextView[@content-desc='camera']";
-		String shutterIcon = "//android.widget.ImageView[@content-desc='Shutter']";
-		String bottomDoneMark = "//android.widget.ImageButton[@content-desc='Done']";
-		// String topDoneMark = "//android.widget.Button[@content-desc='Crop']";
-
-		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-			waitAndClick(uploadDocsBtn);
-
-			try {
-				// Wait for camera icon
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(cameraIcon))).click();
-
-				// Wait for shutter icon
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(shutterIcon))).click();
-
-				// Wait for bottom Done button
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(bottomDoneMark))).click();
-
-				// Wait for top Done button (Crop)
-				// wait.until(ExpectedConditions.elementToBeClickable(By.xpath(topDoneMark))).click();
-			} catch (Exception e) {
-
-			}
-
-			// Handle loader
-			handleLoader();
-
-		} catch (Exception e) {
-			log.error("Failed to upload Docs/Pics: ", e);
-		}
-	}
-
-	public static void uploadImage(String xPath) {
-		String uploadPhotoIcon = "//android.widget.TextView[contains(@text,'Upload')]";
-		String firstImg = "//android.view.View[contains(@content-desc,'Photo taken')]";
-		String firstImg1 = "//android.widget.ImageView[@resource-id=\"com.google.android.documentsui:id/icon_thumb\"]";
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // longer timeout
-
-		try {
-			WebElement photoIcon = null;
-			waitForVisibility(xPath);
-			MobileAutomationUtils.clickElement(xPath);
-			MobileAutomationUtils.handleLoader();
-			photoIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(uploadPhotoIcon)));
-			if (photoIcon != null) {
-				photoIcon.click();
-			}
-			try {
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(firstImg1)));
-				clickElement(firstImg1);
-			} catch (Exception e) {
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(firstImg)));
-				clickElement(firstImg);
-			}
-			MobileAutomationUtils.handleLoader();
-
-		} catch (Exception e) {
-			log.info("Failed to upload Image");
-		}
-	}
-
 	public static String getValuefromPropFile(String key) {
 		String value = null;
 		try {
@@ -373,17 +169,8 @@ public class MobileAutomationUtils {
 		return value;
 	}
 
-	public static String getTextByXPath(String xpath) {
+	public static String getTextByXPath(WebElement element) {
 		try {
-			WebElement element;
-
-			try {
-				element = driver.findElement(By.xpath(xpath));
-			} catch (TimeoutException e) {
-				log.info("Element not visible, attempting scroll");
-				scrollDown();
-				element = driver.findElement(By.xpath(xpath));
-			}
 
 			String text = element.getText();
 
@@ -397,7 +184,7 @@ public class MobileAutomationUtils {
 
 		} catch (Exception e) {
 			log.error("Failed to get text", e);
-			throw new RuntimeException("Unable to get text from element. XPath: " + xpath, e);
+			throw new RuntimeException("Unable to get text from element. XPath: " + element, e);
 		}
 	}
 
@@ -445,27 +232,27 @@ public class MobileAutomationUtils {
 		((JavascriptExecutor) driver).executeScript("arguments[0].style.border='4px solid red'", toastmsg);
 	}
 
-	public static WebElement waitForVisibility(String xpath) {
+	public static WebElement waitForVisibility(WebElement element) {
 		try {
-			return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+			return wait.until(ExpectedConditions.visibilityOf(element));
 		} catch (TimeoutException e) {
-			throw new RuntimeException("Timed out waiting for element to become visible. XPath: " + xpath, e);
+			throw new RuntimeException("Timed out waiting for element to become visible. XPath: " + element, e);
 		} catch (NoSuchElementException e) {
-			throw new RuntimeException("Element not found. XPath: " + xpath, e);
+			throw new RuntimeException("Element not found. XPath: " + element, e);
 		} catch (Exception e) {
-			throw new RuntimeException("Failed while waiting for element visibility. XPath: " + xpath, e);
+			throw new RuntimeException("Failed while waiting for element visibility. XPath: " + element, e);
 		}
 	}
 
-	public static WebElement waitForClickable(String xpath) {
+	public static WebElement waitForClickable(WebElement element) {
 		try {
-			return wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+			return wait.until(ExpectedConditions.elementToBeClickable(element));
 		} catch (TimeoutException e) {
-			throw new RuntimeException("Timed out waiting for element to become clickable. XPath: " + xpath, e);
+			throw new RuntimeException("Timed out waiting for element to become clickable. XPath: " + element, e);
 		} catch (NoSuchElementException e) {
-			throw new RuntimeException("Element not found. XPath: " + xpath, e);
+			throw new RuntimeException("Element not found. XPath: " + element, e);
 		} catch (Exception e) {
-			throw new RuntimeException("Failed while waiting for element clickable. XPath: " + xpath, e);
+			throw new RuntimeException("Failed while waiting for element clickable. XPath: " + element, e);
 		}
 	}
 }

@@ -1,109 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-12T15:34:54 IST" name="Default suite" finished-at="2026-08-12T15:34:55 IST" duration-ms="154">
+  <suite started-at="2026-08-13T14:25:37 IST" name="Default suite" finished-at="2026-08-13T14:25:50 IST" duration-ms="13078">
     <groups>
     </groups>
-    <test started-at="2026-08-12T15:34:54 IST" name="Default test" finished-at="2026-08-12T15:34:55 IST" duration-ms="154">
+    <test started-at="2026-08-13T14:25:37 IST" name="Default test" finished-at="2026-08-13T14:25:50 IST" duration-ms="13078">
       <class name="com.unitestx.tests.mobile.TC01_LoginDemoTest">
-        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@4722ef0c]" started-at="2026-08-12T15:34:41 IST" name="startServer" finished-at="2026-08-12T15:34:54 IST" duration-ms="13103" status="PASS">
+        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:29 IST" name="startServer" finished-at="2026-08-13T14:25:37 IST" duration-ms="8047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startServer -->
-        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@4722ef0c]" started-at="2026-08-12T15:34:55 IST" name="configuration" finished-at="2026-08-12T15:34:55 IST" duration-ms="63" status="FAIL">
-          <exception class="java.lang.NoClassDefFoundError">
-            <message>
-              <![CDATA[org/openqa/selenium/remote/http/jdk/ConnectionException]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: org/openqa/selenium/remote/http/jdk/ConnectionException
-at com.unitestx.driverfactory.AndroidDriverFactory.getDriver(AndroidDriverFactory.java:32)
-at com.unitestx.mobilebase.BaseTest_Mobile.configuration(BaseTest_Mobile.java:53)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.remote.http.jdk.ConnectionException
-at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:37 IST" name="configuration" finished-at="2026-08-13T14:25:42 IST" duration-ms="4947" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configuration -->
-        <test-method signature="demoLogin()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@4722ef0c]" started-at="2026-08-12T15:34:55 IST" name="demoLogin" finished-at="2026-08-12T15:34:55 IST" duration-ms="0" status="SKIP">
-          <exception class="java.lang.NoClassDefFoundError">
-            <message>
-              <![CDATA[org/openqa/selenium/remote/http/jdk/ConnectionException]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NoClassDefFoundError: org/openqa/selenium/remote/http/jdk/ConnectionException
-at com.unitestx.driverfactory.AndroidDriverFactory.getDriver(AndroidDriverFactory.java:32)
-at com.unitestx.mobilebase.BaseTest_Mobile.configuration(BaseTest_Mobile.java:53)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:744)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.remote.http.jdk.ConnectionException
-at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
-... 26 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NoClassDefFoundError -->
+        <test-method signature="demoLogin()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:42 IST" name="demoLogin" finished-at="2026-08-13T14:25:48 IST" duration-ms="6316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- demoLogin -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@4722ef0c]" started-at="2026-08-12T15:34:55 IST" name="Teardown" finished-at="2026-08-12T15:34:55 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:49 IST" name="Teardown" finished-at="2026-08-13T14:25:50 IST" duration-ms="1334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@4722ef0c]" started-at="2026-08-12T15:34:55 IST" name="killAppiumserver" finished-at="2026-08-12T15:34:55 IST" duration-ms="482" status="PASS">
+        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:50 IST" name="killAppiumserver" finished-at="2026-08-13T14:25:50 IST" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killAppiumserver -->

@@ -25,13 +25,31 @@ public class AndroidDriverFactory {
 		return instance;
 	}
 
-	public AndroidDriver getDriver(UiAutomator2Options options) {
+	public AndroidDriver getDriver() {
+		UiAutomator2Options options = new UiAutomator2Options();
+		options.setDeviceName(MobileAutomationUtils.getValuefromPropFile("DeviceName"));
+		options.setAutomationName("UiAutomator2");
+
+		String apkName = MobileAutomationUtils.getValuefromPropFile("ApkName");
+		String apkPath = System.getProperty("user.dir") + MobileAutomationUtils.getValuefromPropFile("apkPath")
+				+ apkName;
+		options.setApp(apkPath);
+		options.setCapability("autoGrantPermissions", true);
+		options.noReset();
+		options.setCapability("newCommandTimeout", 600);
+		options.setCapability("unicodeKeyboard", true);
+		options.setCapability("resetKeyboard", true);
+		options.setCapability("uiautomator2ServerLaunchTimeout", 60000);
+		options.setCapability("uiautomator2ServerInstallTimeout", 60000);
+		options.setCapability("adbExecTimeout", 60000);
+		options.setNoReset(true);
+
 		if (driver == null) {
 			try {
-				log.info("Creating Android Driver..");
 				driver = new AndroidDriver(new URI(MobileAutomationUtils.getValuefromPropFile("serverUrl")).toURL(),
 						options);
 				log.info("Started the AndroidDriver!");
+				log.info("Started Test Execution");
 			} catch (Exception e) {
 				log.error("Failed to Start the AndroidDriver!", e);
 				throw new RuntimeException(e);
@@ -58,6 +76,5 @@ public class AndroidDriverFactory {
 			}
 		}
 	}
-
 
 }

@@ -9,3 +9,186 @@
 2026-08-12 15:35:53 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
 2026-08-12 15:35:59 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
 2026-08-12 15:35:59 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:19:25 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:19:25 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:19:31 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:19:31 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:20:05 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to click on: Located by By.chained({AppiumBy.id: Login Screen})
+java.lang.RuntimeException: Failed while waiting for element clickable. XPath: Located by By.chained({AppiumBy.id: Login Screen})
+	at com.unitestx.utils.MobileAutomationUtils.waitForClickable(MobileAutomationUtils.java:257) ~[classes/:?]
+	at com.unitestx.utils.MobileAutomationUtils.clickElement(MobileAutomationUtils.java:48) ~[classes/:?]
+	at com.unitestx.mobilepages.HomePage_mobile.tapLoginScreen(HomePage_mobile.java:45) ~[classes/:?]
+	at com.unitestx.tests.mobile.TC01_LoginDemoTest.demoLogin(TC01_LoginDemoTest.java:11) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+Caused by: org.openqa.selenium.NoSuchSessionException: A session is either terminated or not started
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6e50477c-48c6-4ae4-aa02-c5ec66277ada, findElement {value=Login Screen, using=id}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 6e50477c-48c6-4ae4-aa02-c5ec66277ada
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:81) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$c1eKdfy6.isDisplayed(Unknown Source) ~[?:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at com.unitestx.utils.MobileAutomationUtils.waitForClickable(MobileAutomationUtils.java:251) ~[classes/:?]
+	... 29 more
+2026-08-13 12:28:49 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:28:49 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:28:55 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:28:55 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:30:36 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:30:36 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:30:43 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:30:43 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:33:40 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:33:40 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:33:47 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:33:47 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:38:04 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:38:04 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:38:12 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:38:12 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:42:37 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:42:37 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:42:46 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:42:46 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:48:34 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:48:34 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:48:43 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:48:43 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:48:49 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 12:48:50 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 12:48:51 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 12:48:52 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 12:48:52 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 12:56:25 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:56:25 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:56:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:56:30 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:56:37 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 12:56:38 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 12:56:39 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 12:56:40 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 12:59:04 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 12:59:04 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 12:59:10 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 12:59:10 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 12:59:16 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 12:59:18 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 12:59:18 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 12:59:19 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 13:38:34 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 13:38:34 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 13:38:39 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 13:38:39 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 13:45:23 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 13:45:23 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 13:45:29 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 13:45:29 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 13:46:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started the execution of testcase: TC01_LoginDemoTest
+2026-08-13 13:52:59 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 13:52:59 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 13:53:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 13:53:07 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 13:53:26 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 13:53:27 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 13:53:28 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 13:53:29 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 13:56:15 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 13:56:15 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 13:56:20 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 13:56:20 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 13:56:58 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 13:56:59 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 13:56:59 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 13:57:00 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 14:07:55 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 14:07:55 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 14:08:01 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 14:08:01 [main] INFO  com.unitestx.utils.LoggerUtil - Page Manager is initialized
+2026-08-13 14:08:07 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 14:08:09 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 14:08:09 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 14:08:10 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 14:22:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 14:22:07 [main] INFO  com.unitestx.utils.LoggerUtil - Creating Android Driver..
+2026-08-13 14:22:13 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 14:22:18 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 14:22:19 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 14:22:20 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 14:22:21 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 14:23:25 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 14:23:31 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 14:23:37 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 14:23:38 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 14:23:38 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 14:23:39 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-13 14:25:37 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-13 14:25:42 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-13 14:25:42 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-08-13 14:25:48 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-13 14:25:49 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-13 14:25:50 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-13 14:25:50 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server

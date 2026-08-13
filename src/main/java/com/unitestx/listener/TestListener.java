@@ -78,7 +78,6 @@ public class TestListener implements ITestListener {
 		}
 
 		try {
-
 			String screenshotPath = null;
 			try {
 				screenshotPath = MobileAutomationUtils.captureScreenshot(
@@ -109,6 +108,7 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		ExtentReportManager.getInstance().flush();
+		test.remove();
 
 	}
 }

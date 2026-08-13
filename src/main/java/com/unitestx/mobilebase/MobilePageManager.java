@@ -1,7 +1,7 @@
 package com.unitestx.mobilebase;
 
+import com.unitestx.mobilepages.HomePage_mobile;
 import com.unitestx.mobilepages.LoginPage_Mobile;
-import com.unitestx.mobilepages.RegistrationPage_Mobile;
 
 import io.appium.java_client.android.AndroidDriver;
 
@@ -13,14 +13,14 @@ public class MobilePageManager {
 	}
 
 	// page object variables
-	private RegistrationPage_Mobile registartionPage_Mobile;
 	private LoginPage_Mobile loginPage_Mobile;
+	private HomePage_mobile homePage_Mobile;
 
-	public RegistrationPage_Mobile getRegistartionPage_Mobile() {
-		if (registartionPage_Mobile == null) {
-			registartionPage_Mobile = new RegistrationPage_Mobile(driver);
+	public HomePage_mobile getHomePage_Mobile() {
+		if (homePage_Mobile == null) {
+			homePage_Mobile = new HomePage_mobile(driver);
 		}
-		return registartionPage_Mobile;
+		return homePage_Mobile;
 	}
 
 	public LoginPage_Mobile getLoginPage_Mobile() {

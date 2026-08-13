@@ -13,7 +13,6 @@ import com.unitestx.utils.LoggerUtil;
 import com.unitestx.utils.MobileAutomationUtils;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.options.UiAutomator2Options;
 
 public class BaseTest_Mobile {
 
@@ -30,35 +29,17 @@ public class BaseTest_Mobile {
 	@BeforeClass(alwaysRun = true)
 	public void configuration() throws URISyntaxException, IOException {
 
-		UiAutomator2Options options = new UiAutomator2Options();
-		options.setDeviceName(MobileAutomationUtils.getValuefromPropFile("DeviceName"));
-		options.setAutomationName("UiAutomator2");
-
-		String apkName = MobileAutomationUtils.getValuefromPropFile("ApkName");
-		String apkPath = System.getProperty("user.dir") + MobileAutomationUtils.getValuefromPropFile("apkPath")
-				+ apkName;
-		options.setApp(apkPath);
-		options.setCapability("autoGrantPermissions", true);
-		options.noReset();
-		options.setCapability("newCommandTimeout", 600);
-		options.setCapability("unicodeKeyboard", true);
-		options.setCapability("resetKeyboard", true);
-		options.setCapability("uiautomator2ServerLaunchTimeout", 60000);
-		options.setCapability("uiautomator2ServerInstallTimeout", 60000);
-		options.setCapability("adbExecTimeout", 60000);
-		String testClassName = this.getClass().getSimpleName();
-		options.setNoReset(true);
-
-		// Use Singleton DriverFactory
-		driver = AndroidDriverFactory.getInstance().getDriver(options);
-
-		if (driver != null) {
-			pages = new MobilePageManager(driver);
-			mobileAutomationutils = new MobileAutomationUtils(driver);
-			log = new LoggerUtil();
-			log.info("Page Manager is initialized");
-		} else {
-			log.info("Page Manager not initialized");
+		try {
+			// Use Singleton Design
+			driver = AndroidDriverFactory.getInstance().getDriver();
+			if (driver != null) {
+				pages = new MobilePageManager(driver);
+				mobileAutomationutils = new MobileAutomationUtils(driver);
+				log = new LoggerUtil();
+			}
+		} catch (Exception e) {
+			log.error("Failed to configure and Set up Android driver", e);
+			throw new RuntimeException(e.getMessage());
 		}
 	}
 
