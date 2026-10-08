@@ -1,4 +1,4 @@
-package com.unitestx.mobilebase;
+package com.unitestx.base;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import com.unitestx.driverfactory.AndroidDriverFactory;
+import com.unitestx.pagemanagers.MobilePageManager;
 import com.unitestx.utils.LoggerUtil;
 import com.unitestx.utils.MobileAutomationUtils;
 
@@ -20,6 +21,7 @@ public class BaseTest_Mobile {
 	protected MobilePageManager pages;
 	protected LoggerUtil log;
 	protected MobileAutomationUtils mobileAutomationutils;
+	protected static String testClassName;
 
 	@BeforeSuite
 	public void startServer() {
@@ -30,16 +32,19 @@ public class BaseTest_Mobile {
 	public void configuration() throws URISyntaxException, IOException {
 
 		try {
-			// Use Singleton Design
-			driver = AndroidDriverFactory.getInstance().getDriver();
-			if (driver != null) {
-				pages = new MobilePageManager(driver);
-				mobileAutomationutils = new MobileAutomationUtils(driver);
-				log = new LoggerUtil();
-			}
+			log = new LoggerUtil();
+			// Use Singleton Design pattern
+			driver = AndroidDriverFactory.getInstance().getDriver(this.getClass().getSimpleName());
 		} catch (Exception e) {
-			log.error("Failed to configure and Set up Android driver", e);
+			log.error("Failed to configure and setup AndroidDriver", e);
 			throw new RuntimeException(e.getMessage());
+		}
+		if (driver != null) {
+			pages = new MobilePageManager(driver);
+			mobileAutomationutils = new MobileAutomationUtils(driver);
+			// Get current test class name
+			testClassName = this.getClass().getSimpleName();
+
 		}
 	}
 
@@ -51,5 +56,9 @@ public class BaseTest_Mobile {
 	@AfterSuite
 	public void killAppiumserver() {
 		AppiumServerManager.killListeningProcess(4723);
+	}
+
+	public static String getCurrentTestcaseID() {
+		return testClassName.split("_")[0];
 	}
 }

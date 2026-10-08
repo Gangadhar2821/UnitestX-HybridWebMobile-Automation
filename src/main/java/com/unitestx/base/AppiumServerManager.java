@@ -1,4 +1,4 @@
-package com.unitestx.mobilebase;
+package com.unitestx.base;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -20,9 +20,9 @@ public class AppiumServerManager {
 		log = new LoggerUtil();
 		String userHome = System.getProperty("user.home");
 
-		String nodePath = MobileAutomationUtils.getValuefromPropFile("nodePath");
-		String ipAddress = MobileAutomationUtils.getValuefromPropFile("ipAddress");
-		String appiumJSpath = MobileAutomationUtils.getValuefromPropFile("appiumJSpath");
+		String nodePath = MobileAutomationUtils.getValuefromPropFile("NODE_PATH");
+		String ipAddress = MobileAutomationUtils.getValuefromPropFile("IP_ADDRESS");
+		String appiumJSpath = MobileAutomationUtils.getValuefromPropFile("APPIUM_JSPATH");
 		AppiumServiceBuilder builder = new AppiumServiceBuilder().withIPAddress(ipAddress).usingPort(4723)
 				.withArgument(GeneralServerFlag.SESSION_OVERRIDE).withArgument(GeneralServerFlag.LOG_LEVEL, "error")
 				.usingDriverExecutable(new File(nodePath)).withAppiumJS(new File(userHome + appiumJSpath))

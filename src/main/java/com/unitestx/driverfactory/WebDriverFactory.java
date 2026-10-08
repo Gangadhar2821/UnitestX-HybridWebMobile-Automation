@@ -1,6 +1,8 @@
 package com.unitestx.driverfactory;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,23 +30,43 @@ public class WebDriverFactory {
 
 	public WebDriver getDriver() {
 		if (driver == null) {
-			WebDriverManager.chromedriver().setup();
+
+			WebDriverManager.chromedriver().cachePath("./drivers").setup();
 			ChromeOptions options = new ChromeOptions();
 
 			options.addArguments("--disable-notifications");
-			options.addArguments("--disable-infobars");
 			options.addArguments("--disable-popup-blocking");
+			options.addArguments("--disable-extensions");
+			options.addArguments("--disable-infobars");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--remote-allow-origins=*");
 			options.addArguments("--disable-translate");
 			options.addArguments("--no-default-browser-check");
-			options.addArguments(
-					"--disable-features=AutofillServerCommunication,PasswordManagerEnabled,PasswordManagerSigninPromo");
+
+			options.addArguments("--disable-features=" + "AutofillServerCommunication," + "PasswordManagerEnabled,"
+					+ "PasswordManagerSigninPromo," + "PasswordLeakDetection");
+
+			Map<String, Object> prefs = new HashMap<>();
+
+			prefs.put("profile.password_manager_leak_detection", false);
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+			prefs.put("autofill.password_manager_enabled", false);
+
+			options.setExperimentalOption("prefs", prefs);
 
 			log.info("Initializing ChromeDriver...");
+
 			driver = new ChromeDriver(options);
+
 			driver.manage().window().maximize();
+
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+
 			log.info("ChromeDriver started successfully!");
 		}
+
 		return driver;
 	}
 

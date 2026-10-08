@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.unitestx.tests.mobile.TC01_LoginDemoTest">
+      <class name="com.unitestx.tests.mobile.TC03_ToSet_ClipboardText">
         <methods>
           <include name="configuration"/>
-          <include name="killAppiumserver"/>
-          <include name="Teardown"/>
-          <include name="demoLogin"/>
+          <include name="setClipboardTxt"/>
           <include name="startServer"/>
+          <include name="Teardown"/>
+          <include name="killAppiumserver"/>
         </methods>
-      </class> <!-- com.unitestx.tests.mobile.TC01_LoginDemoTest -->
+      </class> <!-- com.unitestx.tests.mobile.TC03_ToSet_ClipboardText -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -9,13 +9,12 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 
 public class AndroidDriverFactory {
-
 	private static AndroidDriverFactory instance;
 	private static AndroidDriver driver;
 	private static final LoggerUtil log = new LoggerUtil();
 
 	private AndroidDriverFactory() {
-		// private constructor to prevent external instantiation(Singleton)
+		// private constructor prevents external instantiation(Singleton)
 	}
 
 	public static synchronized AndroidDriverFactory getInstance() {
@@ -25,13 +24,13 @@ public class AndroidDriverFactory {
 		return instance;
 	}
 
-	public AndroidDriver getDriver() {
+	public AndroidDriver getDriver(String testClassName) {
 		UiAutomator2Options options = new UiAutomator2Options();
-		options.setDeviceName(MobileAutomationUtils.getValuefromPropFile("DeviceName"));
+		options.setDeviceName(MobileAutomationUtils.getValuefromPropFile("DEVICE_NAME"));
 		options.setAutomationName("UiAutomator2");
 
-		String apkName = MobileAutomationUtils.getValuefromPropFile("ApkName");
-		String apkPath = System.getProperty("user.dir") + MobileAutomationUtils.getValuefromPropFile("apkPath")
+		String apkName = MobileAutomationUtils.getValuefromPropFile("APK_NAME");
+		String apkPath = System.getProperty("user.dir") + MobileAutomationUtils.getValuefromPropFile("APK_PATH")
 				+ apkName;
 		options.setApp(apkPath);
 		options.setCapability("autoGrantPermissions", true);
@@ -42,11 +41,14 @@ public class AndroidDriverFactory {
 		options.setCapability("uiautomator2ServerLaunchTimeout", 60000);
 		options.setCapability("uiautomator2ServerInstallTimeout", 60000);
 		options.setCapability("adbExecTimeout", 60000);
-		options.setNoReset(true);
-
+		if (testClassName.contains("Registration")) {
+			options.setNoReset(false);
+		} else {
+			options.setNoReset(true);
+		}
 		if (driver == null) {
 			try {
-				driver = new AndroidDriver(new URI(MobileAutomationUtils.getValuefromPropFile("serverUrl")).toURL(),
+				driver = new AndroidDriver(new URI(MobileAutomationUtils.getValuefromPropFile("SERVER_URL")).toURL(),
 						options);
 				log.info("Started the AndroidDriver!");
 				log.info("Started Test Execution");
@@ -65,8 +67,9 @@ public class AndroidDriverFactory {
 	public void quitDriver() {
 		if (driver != null) {
 			try {
-				driver.terminateApp(MobileAutomationUtils.getValuefromPropFile("appPackageName"));
-				log.info("Terminated the Application: " + MobileAutomationUtils.getValuefromPropFile("appPackageName"));
+				driver.terminateApp(MobileAutomationUtils.getValuefromPropFile("APP_PACKAGE_NAME"));
+				log.info("Terminated the Application: "
+						+ MobileAutomationUtils.getValuefromPropFile("APP_PACKAGE_NAME"));
 				driver.quit();
 				log.info("Terminated the Android driver!");
 			} catch (Exception e) {
@@ -76,5 +79,4 @@ public class AndroidDriverFactory {
 			}
 		}
 	}
-
 }

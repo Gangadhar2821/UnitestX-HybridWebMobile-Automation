@@ -1,9 +1,23 @@
 package com.unitestx.datagenerators;
 
 import java.security.SecureRandom;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.Random;
 
-public class Datagenerator {
+public class TestDatagenerator {
+
+	public static String generateString() {
+		String[] PREFIXES = { "sun", "tech", "smart", "green", "bright", "cloud", "swift", "prime" };
+		String[] SUFFIXES = { "link", "care", "hub", "point", "flow", "zone", "track", "works" };
+		Random RANDOM = new Random();
+		String prefix = PREFIXES[RANDOM.nextInt(PREFIXES.length)];
+		String suffix = SUFFIXES[RANDOM.nextInt(SUFFIXES.length)];
+
+		return Character.toUpperCase(prefix.charAt(0)) + prefix.substring(1) + Character.toUpperCase(suffix.charAt(0))
+				+ suffix.substring(1);
+	}
 
 	public static String generateRandomNumber(int n) {
 		if (n <= 0) {
@@ -23,6 +37,25 @@ public class Datagenerator {
 		return sb.toString();
 	}
 
+	/**
+	 * @author gangadhar.b
+	 * @param min range
+	 * @param max range
+	 * @return random number within the range
+	 * 
+	 */
+	public static String generateRandomNumberInRange(int min, int max) {
+		if (min < 0 || max <= min) {
+			throw new IllegalArgumentException(
+					"Invalid range: max must be greater than min, and min must be non-negative");
+		}
+
+		java.util.Random random = new java.util.Random();
+		int randomNumber = random.nextInt((max - min) + 1) + min;
+
+		return String.valueOf(randomNumber);
+	}
+
 	public static String generateMobileNumber() {
 		Random random = new Random();
 
@@ -39,7 +72,7 @@ public class Datagenerator {
 		return mobileNumber.toString();
 	}
 
-	public static String generateName(char ch) {
+	public static String generateUniqueStrings(char ch) {
 		String[] FIRST_NAMES = { "Aarav", "Vivaan", "Aditya", "Sai", "Ishaan", "Krishna", "Ananya", "Diya", "Aisha",
 				"Saanvi", "Pranav", "Rohit", "Karthik", "Vikram", "Neha", "Pooja", "Sneha", "Riya", "Harsha", "Tejas",
 				"James", "Oliver", "Ethan", "Liam", "Noah", "Emma", "Olivia", "Ava", "Sophia", "Mia", "Lucas",
@@ -60,14 +93,7 @@ public class Datagenerator {
 
 		String[] REMARKS = { "Approved", "OK", "Accepted", "Incomplete", "Pass" };
 		String[] STATUS = { "Active", "Inactive" };
-		String[] VEHICLETYPE = { "3 Wheeler", "4 Wheeler", "2 Wheeler" };
 		String[] PINCODES = { "562149", "560029" };
-		String[] IFSC = { "SBIN0005931", "SBIN0041201", "SBIN0041190", "SBIN0040784", "SBIN0013346", "SBIN0041002",
-				"SBIN0017041", "SBIN0041004", "SBIN0041203", "SBIN0041202", "SBIN0040015", "SBIN0040463", "SBIN0021733",
-				"SBIN0018230", "SBIN0070624", "SBIN0032294", "SBIN0040007", "SBIN0050573", "SBIN0070242", "SBIN0051162",
-				"SBIN0040432", "SBIN0020852", "SBIN0021615", "SBIN0021745", "SBIN0003287", "SBIN0004200", "SBIN0006559",
-				"SBIN0004457", "SBIN0011355", "SBIN0011746", "SBIN0006762", "KARB0000016", "KARB0000020", "KARB0000002",
-				"KARB0000014", "KARB0000030", "KARB0000021", "KARB0000012", "KARB0000003" };
 
 		SecureRandom random = new SecureRandom();
 		String firstname = FIRST_NAMES[random.nextInt(FIRST_NAMES.length)];
@@ -76,8 +102,6 @@ public class Datagenerator {
 		String address = ADDRESSES[random.nextInt(ADDRESSES.length)];
 		String remarks = REMARKS[random.nextInt(REMARKS.length)];
 		String status = STATUS[random.nextInt(STATUS.length)];
-		String vechicle = VEHICLETYPE[random.nextInt(VEHICLETYPE.length)];
-		String ifscCodes = IFSC[random.nextInt(IFSC.length)];
 		String pincodes = PINCODES[random.nextInt(PINCODES.length)];
 
 		switch (ch) {
@@ -93,10 +117,6 @@ public class Datagenerator {
 			return remarks;
 		case 'S':
 			return status;
-		case 'V':
-			return vechicle;
-		case 'I':
-			return ifscCodes;
 		case 'P':
 			return pincodes;
 		default:
@@ -105,68 +125,14 @@ public class Datagenerator {
 
 	}
 
-	public static String generateAccountNumber() {
-		Random random = new Random();
-		int length = 16; // total account number length
-
-		StringBuilder acc = new StringBuilder();
-		for (int i = 0; i < length; i++) {
-			acc.append(random.nextInt(10)); // random digit 0–9
-		}
-
-		return acc.toString();
+	public static String getTomorrowDate() {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy", Locale.ENGLISH);
+		return LocalDate.now().plusDays(1).format(formatter);
 	}
 
-	public static String generateUdyamNumber() {
-		String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		Random random = new Random();
-
-		// Helper to generate random letters
-		StringBuilder part1 = new StringBuilder();
-		for (int i = 0; i < 5; i++) {
-			part1.append(letters.charAt(random.nextInt(letters.length())));
-		}
-
-		StringBuilder part2 = new StringBuilder();
-		for (int i = 0; i < 2; i++) {
-			part2.append(letters.charAt(random.nextInt(letters.length())));
-		}
-
-		// Helper to generate random digits
-		StringBuilder part3 = new StringBuilder();
-		for (int i = 0; i < 2; i++) {
-			part3.append(random.nextInt(10));
-		}
-
-		StringBuilder part4 = new StringBuilder();
-		for (int i = 0; i < 7; i++) {
-			part4.append(random.nextInt(10));
-		}
-
-		return part1 + "-" + part2 + "-" + part3 + "-" + part4;
-	}
-
-	public static String generateVoterID() {
-		Random rand = new Random();
-		StringBuilder letters = new StringBuilder();
-		for (int i = 0; i < 3; i++) {
-			char letter = (char) ('A' + rand.nextInt(26));
-			letters.append(letter);
-		}
-		StringBuilder digits = new StringBuilder();
-		for (int i = 0; i < 7; i++) {
-			digits.append(rand.nextInt(10));
-		}
-		// Combine letters + digits
-		return letters.toString() + digits.toString();
-	}
-
-	public static String generateAadharNumber() {
-		return Verhoeff_Logic_Generate_Valid_Aadhar.generateTestAadharNum();
-	}
-
-	public static String generatePANNumber() {
-		return RandomPANGenerator.generateTestPanNum();
+	public static String getFutureDate(long noOfDays) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMM-yyyy", Locale.ENGLISH);
+		return LocalDate.now().plusDays(1 + noOfDays).format(formatter);
 	}
 
 }

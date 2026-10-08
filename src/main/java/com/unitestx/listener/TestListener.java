@@ -19,6 +19,8 @@ public class TestListener implements ITestListener {
 	LoggerUtil log = new LoggerUtil();
 	private static boolean stopExecution = false;
 	private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+	public static String screenshotPath = null;
+	private String methodName = null;
 
 	public static ExtentTest getTest() {
 		return test.get();
@@ -42,6 +44,9 @@ public class TestListener implements ITestListener {
 		if (test.get() != null) {
 			test.get().log(Status.INFO, "Started the execution of testcase: " + className);
 		}
+		WebAutomationUtils.methodName = result.getMethod().getMethodName();
+		MobileAutomationUtils.methodName = result.getMethod().getMethodName();
+		methodName = result.getMethod().getMethodName();
 	}
 
 	@Override
@@ -50,23 +55,10 @@ public class TestListener implements ITestListener {
 		if (test.get() != null) {
 			test.get().log(Status.PASS, "Completed the execution of testcase: " + className);
 		}
-		try {
-			String screenshotPath = null;
-			try {
-				screenshotPath = MobileAutomationUtils.captureScreenshot(
-						AndroidDriverFactory.getInstance().getCurrentDriver(), result.getMethod().getMethodName());
-			} catch (NullPointerException e) {
-				WebAutomationUtils.toastHighlighterOnPass();
-				screenshotPath = WebAutomationUtils.captureScreenshot(WebDriverFactory.getInstance().getCurrentDriver(),
-						result.getMethod().getMethodName());
-			}
-			if (test.get() != null) {
-				test.get().addScreenCaptureFromPath(screenshotPath, "SUCCESS SCREENSHOT");
-			}
-		} catch (Exception e) {
-			log.error("Error while capturing screenshot in success", e);
-		}
 
+		if (test.get() != null && screenshotPath != null) {
+			test.get().addScreenCaptureFromPath(screenshotPath, methodName + " test - Success Screenshot");
+		}
 	}
 
 	@Override
@@ -77,23 +69,9 @@ public class TestListener implements ITestListener {
 			test.get().log(Status.FAIL, result.getThrowable());
 		}
 
-		try {
-			String screenshotPath = null;
-			try {
-				screenshotPath = MobileAutomationUtils.captureScreenshot(
-						AndroidDriverFactory.getInstance().getCurrentDriver(), result.getMethod().getMethodName());
-			} catch (NullPointerException e) {
-				WebAutomationUtils.toastHighlighterOnFail();
-				screenshotPath = WebAutomationUtils.captureScreenshot(WebDriverFactory.getInstance().getCurrentDriver(),
-						result.getMethod().getMethodName());
+		if (test.get() != null && screenshotPath != null) {
+			test.get().addScreenCaptureFromPath(screenshotPath, methodName + " test - Failure Screenshot");
 
-			}
-
-			if (test.get() != null) {
-				test.get().addScreenCaptureFromPath(screenshotPath, "FAILURE SCREENSHOT");
-			}
-		} catch (Exception e) {
-			log.error("Error while capturing failure screenshot", e);
 		}
 	}
 
@@ -108,7 +86,6 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onFinish(ITestContext context) {
 		ExtentReportManager.getInstance().flush();
-		test.remove();
 
 	}
 }

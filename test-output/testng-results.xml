@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-13T14:25:37 IST" name="Default suite" finished-at="2026-08-13T14:25:50 IST" duration-ms="13078">
+  <suite started-at="2026-10-08T16:31:56 IST" name="Default suite" finished-at="2026-10-08T16:32:08 IST" duration-ms="12038">
     <groups>
     </groups>
-    <test started-at="2026-08-13T14:25:37 IST" name="Default test" finished-at="2026-08-13T14:25:50 IST" duration-ms="13078">
-      <class name="com.unitestx.tests.mobile.TC01_LoginDemoTest">
-        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:29 IST" name="startServer" finished-at="2026-08-13T14:25:37 IST" duration-ms="8047" status="PASS">
+    <test started-at="2026-10-08T16:31:56 IST" name="Default test" finished-at="2026-10-08T16:32:08 IST" duration-ms="12038">
+      <class name="com.unitestx.tests.mobile.TC03_ToSet_ClipboardText">
+        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:31:47 IST" name="startServer" finished-at="2026-10-08T16:31:56 IST" duration-ms="9003" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startServer -->
-        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:37 IST" name="configuration" finished-at="2026-08-13T14:25:42 IST" duration-ms="4947" status="PASS">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:31:56 IST" name="configuration" finished-at="2026-10-08T16:32:00 IST" duration-ms="3818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configuration -->
-        <test-method signature="demoLogin()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:42 IST" name="demoLogin" finished-at="2026-08-13T14:25:48 IST" duration-ms="6316" status="PASS">
+        <test-method signature="setClipboardTxt()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:32:00 IST" name="setClipboardTxt" finished-at="2026-10-08T16:32:07 IST" duration-ms="7242" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- demoLogin -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:49 IST" name="Teardown" finished-at="2026-08-13T14:25:50 IST" duration-ms="1334" status="PASS">
+        </test-method> <!-- setClipboardTxt -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:32:07 IST" name="Teardown" finished-at="2026-10-08T16:32:08 IST" duration-ms="945" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@1ce24091]" started-at="2026-08-13T14:25:50 IST" name="killAppiumserver" finished-at="2026-08-13T14:25:50 IST" duration-ms="199" status="PASS">
+        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:32:08 IST" name="killAppiumserver" finished-at="2026-10-08T16:32:09 IST" duration-ms="244" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killAppiumserver -->
-      </class> <!-- com.unitestx.tests.mobile.TC01_LoginDemoTest -->
+      </class> <!-- com.unitestx.tests.mobile.TC03_ToSet_ClipboardText -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

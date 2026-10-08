@@ -192,3 +192,528 @@ Session ID: 6e50477c-48c6-4ae4-aa02-c5ec66277ada
 2026-08-13 14:25:49 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
 2026-08-13 14:25:50 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
 2026-08-13 14:25:50 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-24 10:57:43 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-24 10:58:11 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-24 10:58:11 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-08-24 10:58:22 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-08-24 10:58:26 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-24 10:58:27 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-24 10:58:28 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-08-24 11:38:02 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-08-24 11:38:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-08-24 11:38:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-08-24 11:38:12 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-08-24 11:38:13 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-08-24 11:38:13 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 11:35:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 11:35:07 [main] INFO  com.unitestx.utils.LoggerUtil - Failed to start the Appium server!
+2026-10-08 11:35:25 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 11:35:25 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 11:35:27 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to tap on EchoBox Tab
+java.lang.RuntimeException: Failed while waiting for element visibility. XPath: Located by By.chained({AppiumBy.accessibilityId: Navigate Up})
+	at com.unitestx.utils.MobileAutomationUtils.waitForVisibility(MobileAutomationUtils.java:269) ~[classes/:?]
+	at com.unitestx.mobilepages.HomePage_mobile.tapLoginScreen(HomePage_mobile.java:49) ~[classes/:?]
+	at com.unitestx.tests.mobile.TC01_LoginDemoTest.demoLogin(TC01_LoginDemoTest.java:14) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+Caused by: org.openqa.selenium.WebDriverException: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [b41224d1-87df-41da-b028-6d3569cd49f8, findElement {value=Navigate Up, using=accessibility id}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: b41224d1-87df-41da-b028-6d3569cd49f8
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.lambda$getSearchingFunction$0(ByChained.java:41) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.builder.ByChained.findElement(ByChained.java:72) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$GMMiIcXM.isDisplayed(Unknown Source) ~[?:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at com.unitestx.utils.MobileAutomationUtils.waitForVisibility(MobileAutomationUtils.java:263) ~[classes/:?]
+	... 28 more
+2026-10-08 11:35:27 [main] ERROR com.unitestx.utils.LoggerUtil - Error while capturing failure screenshot
+org.openqa.selenium.WebDriverException: 'GET /screenshot' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [b41224d1-87df-41da-b028-6d3569cd49f8, screenshot {}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: b41224d1-87df-41da-b028-6d3569cd49f8
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:307) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:323) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.AppiumDriver.getScreenshotAs(AppiumDriver.java:316) ~[java-client-9.2.2.jar:?]
+	at com.unitestx.utils.MobileAutomationUtils.captureScreenshot(MobileAutomationUtils.java:245) ~[classes/:?]
+	at com.unitestx.listener.TestListener.onTestFailure(TestListener.java:83) ~[classes/:?]
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:115) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.runTestResultListener(TestInvoker.java:285) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:774) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-10-08 11:35:27 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to Start the AndroidDriver!
+org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output. 
+Host info: host: 'CSPLBLRLP251', ip: '192.168.1.138'
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [null, newSession {capabilities=[{appium:unicodeKeyboard=true, appium:uiautomator2ServerInstallTimeout=60000, platformName=ANDROID, appium:deviceName=Gangadhar, appium:noReset=true, appium:newCommandTimeout=600, appium:uiautomator2ServerLaunchTimeout=60000, appium:app=D:\Eclipse - Workspace\UniTestX\src\test\resources\testapk\TheApp.apk, appium:adbExecTimeout=60000, appium:resetKeyboard=true, appium:automationName=UiAutomator2, appium:autoGrantPermissions=true}], desiredCapabilities=Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Gangadhar, appium:newCommandTimeout: 600, appium:noReset: true, appium:resetKeyboard: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, platformName: ANDROID}}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:deviceName: Gangadhar, appium:newCommandTimeout: 600, appium:noReset: true, appium:resetKeyboard: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, platformName: ANDROID}
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:114) ~[selenium-remote-driver-4.23.0.jar:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:116) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:96) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:163) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:90) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:102) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:109) ~[java-client-9.2.2.jar:?]
+	at com.unitestx.driverfactory.AndroidDriverFactory.getDriver(AndroidDriverFactory.java:49) ~[classes/:?]
+	at com.unitestx.mobilebase.BaseTest_Mobile.configuration(BaseTest_Mobile.java:34) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-10-08 11:35:28 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 11:35:29 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 11:35:29 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 11:35:30 [main] INFO  com.unitestx.utils.LoggerUtil - No LISTENING process found on port 4723
+2026-10-08 11:36:02 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 11:36:06 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 11:36:06 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 11:36:12 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-08 11:36:13 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 11:36:14 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 11:36:14 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 11:36:40 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 11:36:44 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 11:36:44 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 11:36:48 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 11:36:49 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 11:36:49 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 13:18:37 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to configure and setup AndroidDriver
+java.lang.NullPointerException: Cannot invoke "com.unitestx.utils.LoggerUtil.error(String, java.lang.Throwable)" because "com.unitestx.utils.MobileAutomationUtils.log" is null
+	at com.unitestx.utils.MobileAutomationUtils.getValuefromPropFile(MobileAutomationUtils.java:403) ~[classes/:?]
+	at com.unitestx.driverfactory.AndroidDriverFactory.getDriver(AndroidDriverFactory.java:29) ~[classes/:?]
+	at com.unitestx.base.BaseTest_Mobile.configuration(BaseTest_Mobile.java:37) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-10-08 13:21:04 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 13:21:04 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to Start the AndroidDriver!
+java.lang.NullPointerException: Cannot invoke "String.length()" because "this.input" is null
+	at java.net.URI$Parser.parse(URI.java:3186) ~[?:?]
+	at java.net.URI.<init>(URI.java:645) ~[?:?]
+	at com.unitestx.driverfactory.AndroidDriverFactory.getDriver(AndroidDriverFactory.java:51) ~[classes/:?]
+	at com.unitestx.base.BaseTest_Mobile.configuration(BaseTest_Mobile.java:37) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-10-08 13:21:04 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to configure and setup AndroidDriver
+java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "String.length()" because "this.input" is null
+	at com.unitestx.driverfactory.AndroidDriverFactory.getDriver(AndroidDriverFactory.java:57) ~[classes/:?]
+	at com.unitestx.base.BaseTest_Mobile.configuration(BaseTest_Mobile.java:37) ~[classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "String.length()" because "this.input" is null
+	at java.net.URI$Parser.parse(URI.java:3186) ~[?:?]
+	at java.net.URI.<init>(URI.java:645) ~[?:?]
+	at com.unitestx.driverfactory.AndroidDriverFactory.getDriver(AndroidDriverFactory.java:51) ~[classes/:?]
+	... 25 more
+2026-10-08 13:21:05 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 13:25:12 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 13:25:18 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 13:25:18 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 13:25:24 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-08 13:25:25 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 13:25:25 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 13:25:26 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 13:26:49 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 13:26:53 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 13:26:53 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 13:26:59 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-08 13:27:00 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 13:27:01 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 13:27:01 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 13:51:02 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 13:51:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 13:51:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 13:51:11 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 13:51:12 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 13:51:12 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 15:28:32 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 15:28:40 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 15:28:40 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 15:30:05 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-08 15:30:50 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-08 15:30:54 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 15:30:55 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 15:30:56 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 15:31:24 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 15:31:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 15:31:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 15:31:36 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-08 15:31:39 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 15:31:40 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 15:31:40 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 15:34:20 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 15:34:25 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 15:34:25 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 15:34:31 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-08 15:34:34 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 15:34:35 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 15:34:35 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 15:35:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 15:35:12 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 15:35:12 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 15:35:18 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 15:35:19 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 15:35:19 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 16:06:40 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 16:06:46 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 16:06:46 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 16:06:52 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to set the text to the clipboard
+org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.id: enterTextTxt
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Z7zd2Tit.clear(Unknown Source) ~[?:?]
+	at com.unitestx.utils.MobileAutomationUtils.sendKeysToElement(MobileAutomationUtils.java:152) ~[classes/:?]
+	at com.unitestx.mobilepages.ClipBoard_DemoPage_mobile.enterAndSetTextToClipboard(ClipBoard_DemoPage_mobile.java:49) ~[classes/:?]
+	at com.unitestx.tests.mobile.TC03_ToSet_ClipboardText.setClipboardTxt(TC03_ToSet_ClipboardText.java:12) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@433c6abb (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [09df4aa7-c072-4396-9cf3-b3082711f16d, findElement {using=id, value=enterTextTxt}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 09df4aa7-c072-4396-9cf3-b3082711f16d
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	... 32 more
+2026-10-08 16:06:52 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 16:06:53 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 16:06:53 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 16:06:53 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 16:09:33 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 16:09:38 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 16:09:38 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 16:09:44 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to set the text to the clipboard
+org.openqa.selenium.NoSuchElementException: Can't locate an element by this strategy: By.id: enterTextTxt
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:166) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:75) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$yGfFwr3M.clear(Unknown Source) ~[?:?]
+	at com.unitestx.utils.MobileAutomationUtils.sendKeysToElement(MobileAutomationUtils.java:152) ~[classes/:?]
+	at com.unitestx.mobilepages.ClipBoard_DemoPage_mobile.enterAndSetTextToClipboard(ClipBoard_DemoPage_mobile.java:49) ~[classes/:?]
+	at com.unitestx.tests.mobile.TC03_ToSet_ClipboardText.setClipboardTxt(TC03_ToSet_ClipboardText.java:12) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction@29fa6b65 (tried for 1 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:265) ~[selenium-support-4.23.0.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	... 32 more
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [c5598fa5-5bef-44ce-856d-65cc6e721b1e, findElement {value=enterTextTxt, using=id}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: c5598fa5-5bef-44ce-856d-65cc6e721b1e
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.bys.ContentMappedBy.findElement(ContentMappedBy.java:53) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$1.findElement(ElementLocation.java:139) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$1(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:217) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator$WaitingFunction.apply(AppiumElementLocator.java:210) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.23.0.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.waitFor(AppiumElementLocator.java:135) ~[java-client-9.2.2.jar:?]
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:160) ~[java-client-9.2.2.jar:?]
+	... 32 more
+2026-10-08 16:09:44 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 16:09:45 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 16:09:46 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-08 16:12:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 16:12:35 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 16:12:35 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 16:22:33 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 16:22:38 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 16:22:38 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 16:28:34 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 16:28:39 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 16:28:39 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 16:31:56 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-08 16:32:00 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-08 16:32:00 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-08 16:32:08 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-08 16:32:08 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-08 16:32:09 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server

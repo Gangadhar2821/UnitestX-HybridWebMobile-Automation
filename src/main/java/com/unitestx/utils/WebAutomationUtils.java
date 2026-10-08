@@ -2,13 +2,20 @@ package com.unitestx.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.security.SecureRandom;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.Cell;
@@ -17,18 +24,22 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
+import com.unitestx.driverfactory.WebDriverFactory;
 import com.unitestx.listener.TestListener;
 
 public class WebAutomationUtils {
@@ -36,19 +47,52 @@ public class WebAutomationUtils {
 	private static WebDriver driver;
 	private static WebDriverWait wait;
 	private static LoggerUtil log;
+	public static String toastMessage;
+	public static String methodName;
 
 	// Constructor
 	public WebAutomationUtils(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		log = new LoggerUtil();
+	}
+
+	public static String getTomorrowDate() {
+		// Define the formatter with the desired pattern
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MMM/yyyy", Locale.ENGLISH);
+
+		// Get today's date
+		LocalDate today = LocalDate.now();
+
+		// Add one day
+		LocalDate tomorrow = today.plusDays(1);
+
+		// Format tomorrow's date
+		return tomorrow.format(formatter);
+	}
+
+	public static void clear_database_testdata() {
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			log.info("JDBC Driver loaded Successfully");
+		} catch (ClassNotFoundException e) {
+			throw new RuntimeException("SQL Server JDBC Driver not found!", e);
+		}
+		DBUtil.runQuery("//SQL QUERY//");
+		DBUtil.runQuery("//SQL QUERY//");
+		DBUtil.runQuery("//SQL QUERY//");
+		DBUtil.runQuery("//SQL QUERY//");
+		DBUtil.runQuery("//SQL QUERY//");
+
+		// log
+		log.info("Database queries to reset the testdata were executed successfully");
 	}
 
 	// Method to get Test Data from Excel based on Column Name & Row Name for Data
 
 	public static String getTestData(String testCaseID, String columnName) throws IOException {
 		FileInputStream file = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\test\\resources\\Nimble_Glow_TestData.xlsx");
+				System.getProperty("user.dir") + "\\src\\test\\resources\\testdata\\UnitestX_Testdata.xlsx");
 		Workbook workbook = new XSSFWorkbook(file);
 		Sheet sheet = workbook.getSheet("SuperSheet");
 		Row headerRow = sheet.getRow(0);
@@ -80,11 +124,7 @@ public class WebAutomationUtils {
 
 	public static void verifyLandingPage() {
 		String currentUrl = driver.getCurrentUrl().trim();
-		String[] expectedFragments = { "bank-configuration", "branch-configuration", "holiday-calendar",
-				"password-configuration", "mobile-app-configuration", "mobile-admin-panel", "user-maintenance",
-				"role-maintenance", "user-role-mapping", "product-mapping", "bucket-configuration",
-				"write-off-recovery", "overdue-assignment", "user-delegation", "agency-master", "agency-mapping",
-				"roles-management", "audit-logs", "dashboard", "login", "nimbleglowqa" };
+		String[] expectedFragments = { "", "" };
 
 		boolean matchFound = Arrays.stream(expectedFragments).anyMatch(currentUrl::contains);
 
@@ -92,49 +132,137 @@ public class WebAutomationUtils {
 
 	}
 
-	// Click element with retry and JS fallback
-	public static void click(String xPath) {
-		int retries = 3;
-		int attempt = 0;
+	public static String extractTextFromxPath(String xpath) {
+		Pattern pattern = Pattern.compile("text\\(\\)\\s*=\\s*['\"]([^'\"]+)['\"]");
+		Matcher matcher = pattern.matcher(xpath);
 
-		while (attempt < retries) {
+		if (matcher.find()) {
+			return matcher.group(1);
+		}
+		return "";
+	}
+
+	public static void click(String xPath) {
+		for (int attempt = 1; attempt <= 3; attempt++) {
 			try {
-				WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
-				element.click();
-				log.info("Clicked element with XPath: {}" + xPath);
-				return; // success, exit method
+				// Wait for element to be visible
+				WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath)));
+
+				// Scroll into view
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+
+				// Wait until clickable and click
+				wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+
+				log.info("Clicked on element: " + extractTextFromxPath(xPath) + " button");
+
+				return;
+
 			} catch (TimeoutException te) {
-				log.warn("Attempt {}: Element not clickable within timeout: {}" + xPath);
+				log.warn("Timeout on click attempt {}/3 for: {}" + attempt);
+			} catch (ElementClickInterceptedException ice) {
+				log.warn("Click intercepted on attempt {}/3 for: {}" + attempt);
 			} catch (Exception e) {
-				log.warn("Attempt {}: Standard click failed for XPath: {}" + xPath);
+				log.warn("Unexpected error on click attempt {}/3 for: {}" + attempt);
 			}
-			attempt++;
 		}
 
-		// Final fallback: JavaScript click
+		// JS fallback if all attempts fail
 		try {
 			WebElement element = driver.findElement(By.xpath(xPath));
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-			log.info("Clicked element via JavaScript fallback: {}" + xPath);
-		} catch (Exception jsEx) {
-			log.error("JS click also failed for XPath: {}" + xPath, jsEx);
-			throw new RuntimeException("Click failed after retries and JS fallback for XPath: " + xPath, jsEx);
+
+			log.info("Clicked on element using js click: " + extractTextFromxPath(xPath) + " button");
+
+		} catch (Exception e) {
+			log.error("Click failed for XPath: {}" + xPath, e);
+			throw new RuntimeException("Click failed for XPath: " + xPath, e);
 		}
 	}
 
-	// Type text into input field
+	public static void jsClick(String xPath) {
+		// JS fallback if all attempts fail
+		try {
+			WebElement element = driver.findElement(By.xpath(xPath));
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+
+			log.info("Clicked on element: " + extractTextFromxPath(xPath) + " button");
+
+		} catch (Exception e) {
+			log.error("Click failed for XPath: {}" + xPath, e);
+			throw new RuntimeException("Click failed for XPath: " + xPath, e);
+		}
+	}
+
+	/**
+	 * @author gangadhar.b
+	 * @param elementxPath in type String
+	 * @param data         option to be selected in type String
+	 */
+	public static void handleDynamicDropdown(String elementxPath, String data) {
+		try {
+			WebAutomationUtils.click(elementxPath);
+			List<WebElement> allOptions = null;
+			if (allOptions == null) {
+				allOptions = driver.findElements(By.xpath("//div[@role='option']/span"));
+				if (allOptions.isEmpty()) {
+					allOptions = driver.findElements(By.xpath("//span[contains(text(),'" + data + "')]"));
+				}
+				if (allOptions.isEmpty()) {
+					allOptions = driver.findElements(By.xpath("//div[@data-dropdown-panel='true']//button/span"));
+				}
+				if (allOptions.isEmpty()) {
+					List<WebElement> empty = driver
+							.findElements(By.xpath("//div[@data-dropdown-panel='true']//p[text()='No results found']"));
+					if (empty.size() >= 1) {
+						return;
+					}
+				}
+				if (!allOptions.isEmpty()) {
+					for (WebElement ele : allOptions) {
+						String text = ele.getText().trim();
+						if (text.equals(data) || text.contains(data)) {
+							ele.click();
+							break;
+						} else {
+							ele.click();
+							break;
+						}
+					}
+				} else {
+					return;
+				}
+			}
+		} catch (Exception e) {
+			log.error("Failed to select the dropdown option", e);
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+
+	// Type text into input field with robust handling
 	public static void sendKeys(String xPath, String text) {
 		WebElement element = null;
 		try {
 			try {
-				element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath)));
+				element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
 			} catch (Exception e) {
 				scrollToElement(xPath);
-				element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath)));
+				element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
 			}
 
-			element.clear();
+			try {
+				// Attempt to clear normally
+				element.clear();
+			} catch (InvalidElementStateException ex) {
+				// Fallback: select all and delete
+				element.sendKeys(Keys.CONTROL + "a");
+				element.sendKeys(Keys.DELETE);
+			}
+
 			element.sendKeys(text);
+
 		} catch (Exception e) {
 			log.error("SendKeys failed on: " + xPath + " | " + e.getMessage(), e);
 		}
@@ -143,7 +271,9 @@ public class WebAutomationUtils {
 	// Get text from element
 	public static String getText(String xPath) {
 		try {
-			return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath))).getText();
+			scrollToElement(xPath);
+			WebElement element = driver.findElement(By.xpath(xPath));
+			return wait.until(ExpectedConditions.visibilityOf(element)).getText();
 		} catch (Exception e) {
 			log.error("GetText failed on: " + xPath + " | " + e.getMessage(), e);
 			return null;
@@ -192,83 +322,20 @@ public class WebAutomationUtils {
 	// Get attribute value
 	public static String getAttribute(String xPath, String attribute) {
 		try {
-			return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath))).getAttribute(attribute);
+			scrollToElement(xPath);
+			WebElement element = driver.findElement(By.xpath(xPath));
+			return element.getAttribute(attribute);
 		} catch (Exception e) {
 			log.error("GetAttribute failed on: " + xPath + " | " + e.getMessage(), e);
 			return null;
 		}
 	}
 
-	public static void handleDropdown(String eleXpath, String data) {
-		try {
-
-			WebAutomationUtils.handleLoader();
-			try {
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath(eleXpath)));
-			} catch (Exception e) {
-				scrollToElement(eleXpath);
-				WebAutomationUtils.click(eleXpath);
-			}
-			WebAutomationUtils.click(eleXpath);
-
-			boolean found = false;
-			for (int i = 0; i < 5; i++) {
-				try {
-					List<WebElement> options = driver
-							.findElements(By.xpath("//span[@class='mdc-list-item__primary-text']"));
-					if (options.isEmpty()) {
-						options = driver.findElements(By.xpath("//span[@class='mdc-list-item__primary-text']"));
-					}
-					if (options.isEmpty()) {
-						options = driver.findElements(By.xpath(eleXpath + "/option"));
-					}
-					for (WebElement option : options) {
-						String optText = null;
-						try {
-							optText = option.findElement(By.xpath("./span")).getText().trim();
-						} catch (Exception e) {
-							log.info("No Text found for dropdown Option");
-						}
-						if (optText == null || optText.isEmpty()) {
-							optText = option.getText().trim();
-						}
-						if (optText.contains(data)) {
-							option.click();
-							found = true;
-							break;
-						} else if (!optText.isEmpty() & data.equalsIgnoreCase("any")) {
-							option.click();
-							found = true;
-							break;
-						}
-					}
-					if (found)
-						break;
-				} catch (StaleElementReferenceException se) {
-
-				} catch (Exception e) {
-					throw new RuntimeException("Failed to handle the Dropdown!");
-				}
-				Thread.sleep(200);
-			}
-
-			if (!found) {
-				log.info("No Options found!");
-				throw new RuntimeException();
-			}
-
-		} catch (Exception e) {
-			throw new RuntimeException();
-
-		}
-
-	}
-
 	public static String getValuefromPropFile(String key) {
 		String value = null;
 		try {
 			Properties properties = new Properties();
-			FileReader file = new FileReader(System.getProperty("user.dir") + "\\propertyfiles\\glowconfig.properties");
+			FileReader file = new FileReader(System.getProperty("user.dir") + "\\configs\\glowconfig.properties");
 			properties.load(file);
 			value = properties.getProperty(key);
 		} catch (Exception e) {
@@ -281,8 +348,7 @@ public class WebAutomationUtils {
 		String value = null;
 		try {
 			Properties properties = new Properties();
-			FileReader file = new FileReader(
-					System.getProperty("user.dir") + "\\propertyfiles\\glowruntimedata.properties");
+			FileReader file = new FileReader(System.getProperty("user.dir") + "\\configs\\glowruntimedata.properties");
 			properties.load(file);
 			value = properties.getProperty(key);
 		} catch (Exception e) {
@@ -293,9 +359,10 @@ public class WebAutomationUtils {
 
 	public static void handleLoader() {
 		try {
+			String loaderXpath = "//img[@data-testid='loaderImage']";
 			boolean loadingStatus = isLoaderPresent();
 			while (loadingStatus) {
-				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//img[@alt='Loading...']")));
+				wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(loaderXpath)));
 				loadingStatus = isLoaderPresent();
 			}
 		} catch (Exception e) {
@@ -362,87 +429,40 @@ public class WebAutomationUtils {
 		}
 	}
 
-	public static String generateName(char ch) {
-		String[] FIRST_NAMES = { "Aarav", "Vivaan", "Aditya", "Sai", "Ishaan", "Krishna", "Ananya", "Diya", "Aisha",
-				"Saanvi", "Pranav", "Rohit", "Karthik", "Vikram", "Neha", "Pooja", "Sneha", "Riya", "Harsha", "Tejas",
-				"James", "Oliver", "Ethan", "Liam", "Noah", "Emma", "Olivia", "Ava", "Sophia", "Mia", "Lucas",
-				"Benjamin", "Charlotte", "Amelia", "Isabella", "Henry", "Jack", "Emily", "Grace", "Chloe" };
+	public static void handleToaster() {
+		String toastXpath = "//div[contains(@data-testid,'toast')]";
 
-		String[] LAST_NAMES = { "Sharma", "Verma", "Gupta", "Mehta", "Reddy", "Iyer", "Menon", "Patel", "Khan", "Singh",
-				"Nair", "Bhat", "Kulkarni", "Deshpande", "Jain", "Kapoor", "Mishra", "Chatterjee", "Mukherjee",
-				"Saxena", "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez",
-				"Martinez", "Wilson", "Anderson", "Taylor", "Thomas", "Moore", "Jackson", "White", "Harris", "Thompson",
-				"Martin" };
+		try {
+			// Wait until toast container is visible
+			WebElement toastElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(toastXpath)));
 
-		String[] MIDDLE_NAMES = { "Kumar", "Prasad", "Raj", "Singh", "Anand", "Rao", "Chandra", "Mohan", "Lal", "Dev",
-				"James", "Lee", "Marie", "Grace", "Rose", "Ann", "John", "Paul", "Ray", "Jane", };
+			// Capture the entire text from the toast container
+			String toastMsg = toastElement.getText().trim();
+			log.info("Toast Message: " + toastMsg);
 
-		String[] ADDRESSES = { "Indiranagar", "Koramangala", "Whitefield", "Hebbal", "Jayanagar", "HSR", "BTM",
-				"Marathahalli", "Yelahanka", "Malleshwaram", "Richmond", "Ulsoor", "Vasanthnagar", "Rajajinagar",
-				"Banashankari", "Domlur", "Sarjapur", "ElectronicCity", "Bellandur", "Kengeri" };
+			// Save message for later validation
+			toastMessage = toastMsg;
+			if (toastMsg.toLowerCase().contains("login") || toastMsg.toLowerCase().contains("success")) {
+				toastHighlighterOnPass();
+				takescreenshot_And_AppendTo_Path();
+			}
+			// handle toast
+			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(toastXpath)));
 
-		String[] REMARKS = { "Approved", "OK", "Accepted", "Incomplete", "Pass" };
-		String[] STATUS = { "Active", "Inactive" };
-		String[] VEHICLETYPE = { "3 Wheeler", "4 Wheeler", "2 Wheeler" };
-
-		String[] IFSC = { "SBIN0000813", "SBIN0000814", "KARB0000815", "KARB0000526" };
-
-		SecureRandom random = new SecureRandom();
-		String firstname = FIRST_NAMES[random.nextInt(FIRST_NAMES.length)];
-		String middlename = MIDDLE_NAMES[random.nextInt(MIDDLE_NAMES.length)];
-		String lastname = LAST_NAMES[random.nextInt(LAST_NAMES.length)];
-		String address = ADDRESSES[random.nextInt(ADDRESSES.length)];
-		String remarks = REMARKS[random.nextInt(REMARKS.length)];
-		String status = STATUS[random.nextInt(STATUS.length)];
-		String vechicle = VEHICLETYPE[random.nextInt(VEHICLETYPE.length)];
-		String ifscCodes = IFSC[random.nextInt(IFSC.length)];
-
-		switch (ch) {
-		case 'F':
-			return firstname;
-		case 'M':
-			return middlename;
-		case 'L':
-			return lastname;
-		case 'A':
-			return address;
-		case 'R':
-			return remarks;
-		case 'S':
-			return status;
-		case 'V':
-			return vechicle;
-		case 'I':
-			return ifscCodes;
-		default:
-			return "Invalid choice!";
+		} catch (TimeoutException te) {
+			log.error("Toast message not visible within timeout", te);
+		} catch (Exception e) {
+			log.error("Unexpected error while handling toast", e);
 		}
-
 	}
 
-	public static String generateRandomNumber(int n) {
-		if (n <= 0) {
-			throw new IllegalArgumentException("Number of digits must be greater than 0");
-		}
-		StringBuilder sb = new StringBuilder();
-		java.util.Random random = new java.util.Random();
+	public static void takescreenshot_And_AppendTo_Path() {
+		try {
+			TestListener.screenshotPath = WebAutomationUtils
+					.captureScreenshot(WebDriverFactory.getInstance().getCurrentDriver(), methodName);
+		} catch (Exception e) {
+			log.error("Failed to capture Screenshot", e);
 
-		// First digit should not be zero (to ensure n digits)
-		sb.append(random.nextInt(9) + 1);
-
-		// Remaining digits can be 0-9
-		for (int i = 1; i < n; i++) {
-			sb.append(random.nextInt(10));
-		}
-
-		return sb.toString();
-	}
-
-	public static void handleAlert() {
-		String alert = "//div[@role='alert']";
-		WebElement alertt = FindElementByStringXpath(alert);
-		if (alertt != null) {
-			wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(alert)));
 		}
 	}
 
@@ -486,14 +506,94 @@ public class WebAutomationUtils {
 	}
 
 	public static void toastHighlighterOnPass() {
-		String postLoginToastmsg = "//div[@role='alert']";
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		String postLoginToastmsg = "//div[contains(@data-testid,'toast')]";
 		WebElement toastmsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(postLoginToastmsg)));
 		((JavascriptExecutor) driver).executeScript("arguments[0].style.border='4px solid green'", toastmsg);
 	}
 
 	public static void toastHighlighterOnFail() {
-		String postLoginToastmsg = "//div[@role='alert']";
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		String postLoginToastmsg = "//div[contains(@data-testid,'toast')]";
 		WebElement toastmsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(postLoginToastmsg)));
 		((JavascriptExecutor) driver).executeScript("arguments[0].style.border='4px solid red'", toastmsg);
+	}
+
+	public static void saveToProperty(String key, String value) {
+		try {
+			Properties props = new Properties();
+			String filePath = System.getProperty("user.dir") + "\\configs\\glowruntimedata.properties";
+			File file = new File(filePath);
+
+			// Load existing properties if file already exists
+			if (file.exists()) {
+				FileInputStream input = new FileInputStream(file);
+				props.load(input);
+				input.close();
+			}
+
+			// Add or update the key-value
+			props.setProperty(key, value);
+
+			// Save back to file
+			FileOutputStream output = new FileOutputStream(file);
+			props.store(output, "Updated at runtime");
+			output.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * @author gangadhar.b
+	 * @param calenderIcon xpath in String
+	 * @param date         in the format of DD/MMM/YYYY eg: 09/Oct/2026
+	 */
+	public static void handleCalender(String calenderIcon, String date) {
+		try {
+			String yearBtn = "//button[contains(text(),'20')]";
+			String monthBtn = "//button[contains(text(),'20')]/parent::div/preceding-sibling::div/button";
+			String yearOpts = "(//button[contains(text(),'20')])[2]/parent::div//button";
+			String monthOpts = "//button[contains(text(),'20')]/parent::div/preceding-sibling::div/button/parent::div//div[contains(@class,'dropdown')]/button";
+			WebAutomationUtils.click(calenderIcon);
+			String[] split = date.trim().split("/");
+			String daydata = split[0];
+			String monthdata = split[1];
+			String yeardata = split[2];
+
+			// picking year
+			WebAutomationUtils.click(yearBtn);
+			List<WebElement> years = driver.findElements(By.xpath(yearOpts));
+			for (WebElement ele : years) {
+				String actualyear = ele.getText().trim();
+				if (yeardata.equals(actualyear)) {
+					ele.click();
+					break;
+				}
+			}
+
+			// picking month
+			WebAutomationUtils.click(monthBtn);
+			List<WebElement> months = driver.findElements(By.xpath(monthOpts));
+			for (WebElement ele : months) {
+				String actualMonth = ele.getText().trim();
+				if (actualMonth.contains(monthdata)) {
+					ele.click();
+					break;
+				}
+			}
+
+			// selecting date
+			WebAutomationUtils.click("//button[text()='" + daydata + "']");
+
+		} catch (Exception e) {
+			log.error("Failed to handle calender input", e);
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+
+	public static void pressEsckey() {
+		Actions action = new Actions(driver);
+		action.sendKeys(Keys.ESCAPE);
 	}
 }

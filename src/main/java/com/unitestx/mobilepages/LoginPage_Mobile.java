@@ -1,7 +1,10 @@
 package com.unitestx.mobilepages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.unitestx.utils.LoggerUtil;
 import com.unitestx.utils.MobileAutomationUtils;
@@ -11,10 +14,14 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class LoginPage_Mobile {
+	private AndroidDriver driver;
 	private LoggerUtil log;
+	private WebDriverWait wait;
 
 	public LoginPage_Mobile(AndroidDriver driver) {
+		this.driver = driver;
 		log = new LoggerUtil();
+		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
@@ -55,6 +62,7 @@ public class LoginPage_Mobile {
 			String errorTxt = MobileAutomationUtils.getTextByXPath(invalidLoginErrorMsg);
 			if (errorTxt.contains("Invalid")) {
 				log.info(errorTxt);
+				MobileAutomationUtils.takescreenshot_And_AppendTo_Path();
 				MobileAutomationUtils.clickElement(okBtn);
 			} else {
 				log.info("No error message was found");

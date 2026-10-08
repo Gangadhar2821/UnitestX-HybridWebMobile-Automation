@@ -1,4 +1,4 @@
-package com.unitestx.webbase;
+package com.unitestx.pagemanagers;
 
 import org.openqa.selenium.WebDriver;
 
