@@ -174,6 +174,36 @@ public class MobileAutomationUtils {
 		}
 	}
 
+	public static void switchToWebView(AndroidDriver driver) {
+		try {
+			String webViewContext = "WEBVIEW_com.appiumpro.the_app";
+
+			for (String context : driver.getContextHandles()) {
+				if (context.contains("WEBVIEW")) {
+					driver.context(context);
+					log.info("Driver switched to context: " + webViewContext);
+					return;
+				}
+			}
+		} catch (Exception e) {
+			log.error("Failed to switch to Webview context", e);
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+
+	public static void switchToNative(AndroidDriver driver) {
+		String nativeContext = "NATIVE_APP";
+
+		try {
+			driver.context("NATIVE_APP");
+			log.info("Driver switched to context: " + nativeContext);
+
+		} catch (Exception e) {
+			log.error("Failed to switch to Native context", e);
+			throw new RuntimeException(e.getMessage());
+		}
+	}
+
 	/**
 	 * @author gangadhar.b
 	 * @param eleXpath is the Drop down element

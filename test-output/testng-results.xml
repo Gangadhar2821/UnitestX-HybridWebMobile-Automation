@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-08T16:31:56 IST" name="Default suite" finished-at="2026-10-08T16:32:08 IST" duration-ms="12038">
+  <suite started-at="2026-10-09T14:59:26 IST" name="Default suite" finished-at="2026-10-09T14:59:42 IST" duration-ms="15878">
     <groups>
     </groups>
-    <test started-at="2026-10-08T16:31:56 IST" name="Default test" finished-at="2026-10-08T16:32:08 IST" duration-ms="12038">
-      <class name="com.unitestx.tests.mobile.TC03_ToSet_ClipboardText">
-        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:31:47 IST" name="startServer" finished-at="2026-10-08T16:31:56 IST" duration-ms="9003" status="PASS">
+    <test started-at="2026-10-09T14:59:26 IST" name="Default test" finished-at="2026-10-09T14:59:42 IST" duration-ms="15878">
+      <class name="com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test">
+        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:18 IST" name="startServer" finished-at="2026-10-09T14:59:26 IST" duration-ms="8662" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startServer -->
-        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:31:56 IST" name="configuration" finished-at="2026-10-08T16:32:00 IST" duration-ms="3818" status="PASS">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:26 IST" name="configuration" finished-at="2026-10-09T14:59:31 IST" duration-ms="4945" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configuration -->
-        <test-method signature="setClipboardTxt()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:32:00 IST" name="setClipboardTxt" finished-at="2026-10-08T16:32:07 IST" duration-ms="7242" status="PASS">
+        <test-method signature="slectOption()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:31 IST" name="slectOption" finished-at="2026-10-09T14:59:41 IST" duration-ms="9446" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setClipboardTxt -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:32:07 IST" name="Teardown" finished-at="2026-10-08T16:32:08 IST" duration-ms="945" status="PASS">
+        </test-method> <!-- slectOption -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:41 IST" name="Teardown" finished-at="2026-10-09T14:59:42 IST" duration-ms="1257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText@5dda768f]" started-at="2026-10-08T16:32:08 IST" name="killAppiumserver" finished-at="2026-10-08T16:32:09 IST" duration-ms="244" status="PASS">
+        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:42 IST" name="killAppiumserver" finished-at="2026-10-09T14:59:43 IST" duration-ms="238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killAppiumserver -->
-      </class> <!-- com.unitestx.tests.mobile.TC03_ToSet_ClipboardText -->
+      </class> <!-- com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

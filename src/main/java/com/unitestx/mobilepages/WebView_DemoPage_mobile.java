@@ -4,9 +4,12 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.unitestx.utils.LoggerUtil;
+import com.unitestx.utils.MobileAutomationUtils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -20,7 +23,7 @@ public class WebView_DemoPage_mobile {
 	public WebView_DemoPage_mobile(AndroidDriver driver) {
 		this.driver = driver;
 		log = new LoggerUtil();
-		new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
@@ -35,13 +38,26 @@ public class WebView_DemoPage_mobile {
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Clear\")")
 	private WebElement clearBtn;
 
+	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Error loading page\")")
+	private WebElement webPageTxt;
+
 	public void navigateToSite() {
 		try {
-
+			MobileAutomationUtils.sendKeysToElement(urlInputField,
+					MobileAutomationUtils.getValuefromPropFile("MOBILE_URLDATA"));
+			MobileAutomationUtils.clickElement(goBtn);
 		} catch (Exception e) {
 			log.error("Failed to navigate to site url", e);
 			throw new RuntimeException(e.getMessage());
 		}
 	}
 
+	public void verifyWebViewText() {
+		try {
+			Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(webPageTxt)).isDisplayed());
+		} catch (Exception e) {
+			log.error("Failed to navigate to site url", e);
+			throw new RuntimeException(e.getMessage());
+		}
+	}
 }

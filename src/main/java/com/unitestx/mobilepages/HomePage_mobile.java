@@ -42,9 +42,6 @@ public class HomePage_mobile extends BaseTest_Mobile {
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Webview Demo\")")
 	private WebElement webViewDemoBtn;
 
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Dual Webview Demo\")")
-	private WebElement dualWebViewDemoBtn;
-
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"List Demo\")")
 	private WebElement listDemoBtn;
 
@@ -71,9 +68,6 @@ public class HomePage_mobile extends BaseTest_Mobile {
 
 	@AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"urlInput\")")
 	private WebElement webViewDemoScreenTitle;
-
-	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"This is webview '1'\")")
-	private WebElement dualWebViewDemoScreenTitle;
 
 	@AndroidFindBy(uiAutomator = "new UiSelector().text(\"Check out these clouds\")")
 	private WebElement listDemoScreenTitle;
@@ -124,16 +118,6 @@ public class HomePage_mobile extends BaseTest_Mobile {
 			verifyLandingScreen(webViewDemoScreenTitle);
 		} catch (Exception e) {
 			log.error("Failed to navigate to web view Demo screen", e);
-			throw new RuntimeException(e.getMessage());
-		}
-	}
-
-	public void navigateTodualWebViewDemoScreen() {
-		try {
-			MobileAutomationUtils.clickElement(dualWebViewDemoBtn);
-			verifyLandingScreen(dualWebViewDemoScreenTitle);
-		} catch (Exception e) {
-			log.error("Failed to navigate to dual web view Demo screen", e);
 			throw new RuntimeException(e.getMessage());
 		}
 	}
@@ -211,7 +195,7 @@ public class HomePage_mobile extends BaseTest_Mobile {
 
 	public static void verifyLandingScreen(WebElement element) {
 		try {
-			String[] expectedFragments = { "Echo Screen", "Login", "(No clipboard text)", "urlInput",
+			String[] expectedFragments = { "Echo Screen", "Login", "(No clipboard text)", "https://appiumpro.com",
 					"This is webview '1'", "Check out these clouds", "Photo Library. Tap a photo!",
 					"Latitude: 12.9063633", "Pick a date to learn more about it", "waiting", "TheApp" };
 			String screenTitle = MobileAutomationUtils.getTextByXPath(element);

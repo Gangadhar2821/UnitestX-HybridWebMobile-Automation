@@ -3,7 +3,9 @@ package com.unitestx.pagemanagers;
 import com.unitestx.mobilepages.ClipBoard_DemoPage_mobile;
 import com.unitestx.mobilepages.EchoBoxPage_mobile;
 import com.unitestx.mobilepages.HomePage_mobile;
+import com.unitestx.mobilepages.ListDemoPage_mobile;
 import com.unitestx.mobilepages.LoginPage_Mobile;
+import com.unitestx.mobilepages.WebView_DemoPage_mobile;
 
 import io.appium.java_client.android.AndroidDriver;
 
@@ -19,6 +21,8 @@ public class MobilePageManager {
 	private HomePage_mobile homePage_Mobile;
 	private EchoBoxPage_mobile echoBoxPage_mobile;
 	private ClipBoard_DemoPage_mobile clipBoard_DemoPage_mobile;
+	private WebView_DemoPage_mobile webView_DemoPage_mobile;
+	private ListDemoPage_mobile listDemoPage_mobile;
 
 	public HomePage_mobile getHomePage_Mobile() {
 		if (homePage_Mobile == null) {
@@ -46,6 +50,20 @@ public class MobilePageManager {
 			clipBoard_DemoPage_mobile = new ClipBoard_DemoPage_mobile(driver);
 		}
 		return clipBoard_DemoPage_mobile;
+	}
+
+	public WebView_DemoPage_mobile getWebView_DemoPage_mobile() {
+		if (webView_DemoPage_mobile == null) {
+			webView_DemoPage_mobile = new WebView_DemoPage_mobile(driver);
+		}
+		return webView_DemoPage_mobile;
+	}
+
+	public ListDemoPage_mobile getListDemoPage_mobile() {
+		if (listDemoPage_mobile == null) {
+			listDemoPage_mobile = new ListDemoPage_mobile(driver);
+		}
+		return listDemoPage_mobile;
 	}
 
 }
