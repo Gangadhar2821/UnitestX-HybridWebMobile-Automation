@@ -11,10 +11,12 @@ public class TC02_EchoBox_Input_Test extends BaseTest_Mobile {
 
 	@Test
 	public void inputkeys() {
+		log.info("Started executing TC02_EchoBox_Input_Test Test");
 		pages.getHomePage_Mobile().navigateToEchoBoxcreen();
 		pages.getEchoBoxPage_mobile().enterTextAndSave();
 		pages.getEchoBoxPage_mobile().verifySavedTxt();
 		pages.getHomePage_Mobile().navigateBackToHomeScreen();
+		log.info("Completed executing TC02_EchoBox_Input_Test Test");
 
 	}
 }

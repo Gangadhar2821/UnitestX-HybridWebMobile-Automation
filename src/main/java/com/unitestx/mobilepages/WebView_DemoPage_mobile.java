@@ -55,6 +55,7 @@ public class WebView_DemoPage_mobile {
 	public void verifyWebViewText() {
 		try {
 			Assert.assertTrue(wait.until(ExpectedConditions.visibilityOf(webPageTxt)).isDisplayed());
+			MobileAutomationUtils.takescreenshot_And_AppendTo_Path();
 		} catch (Exception e) {
 			log.error("Failed to navigate to site url", e);
 			throw new RuntimeException(e.getMessage());

@@ -11,10 +11,12 @@ public class TC01_LoginDemoTest extends BaseTest_Mobile {
 
 	@Test
 	public void demoLogin() {
+		log.info("Started executing TC01_LoginDemoTest Test");
 		pages.getHomePage_Mobile().navigateToLoginScreen();
 		pages.getLoginPage_Mobile().login();
 		pages.getLoginPage_Mobile().verifyinvalidLogin();
 		pages.getHomePage_Mobile().navigateBackToHomeScreen();
+		log.info("Completed executing TC01_LoginDemoTest Test");
 
 	}
 }

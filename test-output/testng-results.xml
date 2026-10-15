@@ -1,33 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="6" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-10-09T14:59:26 IST" name="Default suite" finished-at="2026-10-09T14:59:42 IST" duration-ms="15878">
+  <suite started-at="2026-10-15T16:41:30 IST" name="The Mobile App Test Suite" finished-at="2026-10-15T16:43:36 IST" duration-ms="125828">
     <groups>
     </groups>
-    <test started-at="2026-10-09T14:59:26 IST" name="Default test" finished-at="2026-10-09T14:59:42 IST" duration-ms="15878">
-      <class name="com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test">
-        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:18 IST" name="startServer" finished-at="2026-10-09T14:59:26 IST" duration-ms="8662" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startServer -->
-        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:26 IST" name="configuration" finished-at="2026-10-09T14:59:31 IST" duration-ms="4945" status="PASS">
+    <test started-at="2026-10-15T16:41:30 IST" name="Functional Test" finished-at="2026-10-15T16:43:36 IST" duration-ms="125828">
+      <class name="com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test@3bd82cf5]" started-at="2026-10-15T16:42:51 IST" name="configuration" finished-at="2026-10-15T16:42:58 IST" duration-ms="6526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configuration -->
-        <test-method signature="slectOption()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:31 IST" name="slectOption" finished-at="2026-10-09T14:59:41 IST" duration-ms="9446" status="PASS">
+        <test-method signature="fetchGeoLocationDemo()[pri:0, instance:com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test@3bd82cf5]" started-at="2026-10-15T16:42:58 IST" name="fetchGeoLocationDemo" finished-at="2026-10-15T16:43:01 IST" duration-ms="2652" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[@$Proxy30: one of [uiAutomator, accessibility, className, id, tagName, name, xpath, linkText, partialLinkText, iOSClassChain, androidDataMatcher, androidViewMatcher, iOSNsPredicate] should be filled]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: @$Proxy30: one of [uiAutomator, accessibility, className, id, tagName, name, xpath, linkText, partialLinkText, iOSClassChain, androidDataMatcher, androidViewMatcher, iOSNsPredicate] should be filled
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.lambda$getFilledValue$4(AppiumByBuilder.java:103)
+at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:102)
+at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:141)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:199)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:93)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:78)
+at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:33)
+at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:55)
+at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+at com.unitestx.mobilepages.GeoLocationDemoPage_mobile.<init>(GeoLocationDemoPage_mobile.java:27)
+at com.unitestx.pagemanagers.MobilePageManager.getGeoLocationDemoPage_mobile(MobilePageManager.java:84)
+at com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test.fetchGeoLocationDemo(TC07_Fetch_GeoLoactaionDemo_Test.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- slectOption -->
-        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:41 IST" name="Teardown" finished-at="2026-10-09T14:59:42 IST" duration-ms="1257" status="PASS">
+        </test-method> <!-- fetchGeoLocationDemo -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test@3bd82cf5]" started-at="2026-10-15T16:43:01 IST" name="Teardown" finished-at="2026-10-15T16:43:03 IST" duration-ms="2207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Teardown -->
-        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@24aed80c]" started-at="2026-10-09T14:59:42 IST" name="killAppiumserver" finished-at="2026-10-09T14:59:43 IST" duration-ms="238" status="PASS">
+      </class> <!-- com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test -->
+      <class name="com.unitestx.tests.mobile.TC02_EchoBox_Input_Test">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC02_EchoBox_Input_Test@4c178a76]" started-at="2026-10-15T16:42:10 IST" name="configuration" finished-at="2026-10-15T16:42:15 IST" duration-ms="4721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method signature="inputkeys()[pri:0, instance:com.unitestx.tests.mobile.TC02_EchoBox_Input_Test@4c178a76]" started-at="2026-10-15T16:42:15 IST" name="inputkeys" finished-at="2026-10-15T16:42:21 IST" duration-ms="6596" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputkeys -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC02_EchoBox_Input_Test@4c178a76]" started-at="2026-10-15T16:42:21 IST" name="Teardown" finished-at="2026-10-15T16:42:23 IST" duration-ms="1795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.unitestx.tests.mobile.TC02_EchoBox_Input_Test -->
+      <class name="com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test@b2c9a9c]" started-at="2026-10-15T16:41:56 IST" name="configuration" finished-at="2026-10-15T16:42:01 IST" duration-ms="4647" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method signature="setClipboardTxt()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test@b2c9a9c]" started-at="2026-10-15T16:42:01 IST" name="setClipboardTxt" finished-at="2026-10-15T16:42:09 IST" duration-ms="8049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setClipboardTxt -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test@b2c9a9c]" started-at="2026-10-15T16:42:09 IST" name="Teardown" finished-at="2026-10-15T16:42:10 IST" duration-ms="1286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test -->
+      <class name="com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test@2362f559]" started-at="2026-10-15T16:41:45 IST" name="configuration" finished-at="2026-10-15T16:41:50 IST" duration-ms="4703" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method signature="photoviewDemo()[pri:0, instance:com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test@2362f559]" started-at="2026-10-15T16:41:50 IST" name="photoviewDemo" finished-at="2026-10-15T16:41:55 IST" duration-ms="5227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- photoviewDemo -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test@2362f559]" started-at="2026-10-15T16:41:55 IST" name="Teardown" finished-at="2026-10-15T16:41:56 IST" duration-ms="1452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test -->
+      <class name="com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@fa4c865]" started-at="2026-10-15T16:42:23 IST" name="configuration" finished-at="2026-10-15T16:42:29 IST" duration-ms="6013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method signature="selectOption()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@fa4c865]" started-at="2026-10-15T16:42:29 IST" name="selectOption" finished-at="2026-10-15T16:42:50 IST" duration-ms="20826" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [48963ae9-b4c8-48e9-8c8f-eee4138c372e, getElementText {id=00000000-0000-0145-ffff-ffff0000009a}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (48963ae9-b4c8-48e9-8c8f-eee4138c372e)] -> xpath: //android.widget.ScrollView//android.widget.TextView]
+Session ID: 48963ae9-b4c8-48e9-8c8f-eee4138c372e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [48963ae9-b4c8-48e9-8c8f-eee4138c372e, getElementText {id=00000000-0000-0145-ffff-ffff0000009a}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (48963ae9-b4c8-48e9-8c8f-eee4138c372e)] -> xpath: //android.widget.ScrollView//android.widget.TextView]
+Session ID: 48963ae9-b4c8-48e9-8c8f-eee4138c372e
+at com.unitestx.mobilepages.ListDemoPage_mobile.selectListOption(ListDemoPage_mobile.java:85)
+at com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test.selectOption(TC05_ToSelectListOptionDemo_Test.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectOption -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@fa4c865]" started-at="2026-10-15T16:42:50 IST" name="Teardown" finished-at="2026-10-15T16:42:51 IST" duration-ms="1284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test -->
+      <class name="com.unitestx.tests.mobile.TC04_WebViewDemo_Test">
+        <test-method is-config="true" signature="startServer()[pri:0, instance:com.unitestx.tests.mobile.TC04_WebViewDemo_Test@65e98b1c]" started-at="2026-10-15T16:41:21 IST" name="startServer" finished-at="2026-10-15T16:41:30 IST" duration-ms="8706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startServer -->
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC04_WebViewDemo_Test@65e98b1c]" started-at="2026-10-15T16:41:30 IST" name="configuration" finished-at="2026-10-15T16:41:35 IST" duration-ms="5071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method signature="navigateToWebPage()[pri:0, instance:com.unitestx.tests.mobile.TC04_WebViewDemo_Test@65e98b1c]" started-at="2026-10-15T16:41:35 IST" name="navigateToWebPage" finished-at="2026-10-15T16:41:43 IST" duration-ms="8402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToWebPage -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC04_WebViewDemo_Test@65e98b1c]" started-at="2026-10-15T16:41:43 IST" name="Teardown" finished-at="2026-10-15T16:41:45 IST" duration-ms="1330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+        <test-method is-config="true" signature="killAppiumserver()[pri:0, instance:com.unitestx.tests.mobile.TC04_WebViewDemo_Test@65e98b1c]" started-at="2026-10-15T16:43:36 IST" name="killAppiumserver" finished-at="2026-10-15T16:43:36 IST" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killAppiumserver -->
-      </class> <!-- com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.unitestx.tests.mobile.TC04_WebViewDemo_Test -->
+      <class name="com.unitestx.tests.mobile.TC01_LoginDemoTest">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@544fa968]" started-at="2026-10-15T16:43:03 IST" name="configuration" finished-at="2026-10-15T16:43:09 IST" duration-ms="6374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method signature="demoLogin()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@544fa968]" started-at="2026-10-15T16:43:09 IST" name="demoLogin" finished-at="2026-10-15T16:43:19 IST" duration-ms="10150" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demoLogin -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC01_LoginDemoTest@544fa968]" started-at="2026-10-15T16:43:19 IST" name="Teardown" finished-at="2026-10-15T16:43:20 IST" duration-ms="1023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.unitestx.tests.mobile.TC01_LoginDemoTest -->
+      <class name="com.unitestx.tests.mobile.TC08_DatePickerDemo_Test">
+        <test-method is-config="true" signature="configuration()[pri:0, instance:com.unitestx.tests.mobile.TC08_DatePickerDemo_Test@247bddad]" started-at="2026-10-15T16:43:20 IST" name="configuration" finished-at="2026-10-15T16:43:27 IST" duration-ms="6219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configuration -->
+        <test-method signature="pickDateDemo()[pri:0, instance:com.unitestx.tests.mobile.TC08_DatePickerDemo_Test@247bddad]" started-at="2026-10-15T16:43:27 IST" name="pickDateDemo" finished-at="2026-10-15T16:43:34 IST" duration-ms="7615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pickDateDemo -->
+        <test-method is-config="true" signature="Teardown()[pri:0, instance:com.unitestx.tests.mobile.TC08_DatePickerDemo_Test@247bddad]" started-at="2026-10-15T16:43:34 IST" name="Teardown" finished-at="2026-10-15T16:43:36 IST" duration-ms="1489" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Teardown -->
+      </class> <!-- com.unitestx.tests.mobile.TC08_DatePickerDemo_Test -->
+    </test> <!-- Functional Test -->
+  </suite> <!-- The Mobile App Test Suite -->
 </testng-results>

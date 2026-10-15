@@ -11,10 +11,12 @@ public class TC03_ToSet_ClipboardText_Test extends BaseTest_Mobile {
 
 	@Test
 	public void setClipboardTxt() {
+		log.info("Started executing TC03_ToSet_ClipboardText_Test Test");
 		pages.getHomePage_Mobile().navigateToClipBoardDemoScreen();
 		pages.getClipBoard_DemoPage_mobile().enterAndSetTextToClipboard();
 		pages.getClipBoard_DemoPage_mobile().verifyTextSetToClipboard();
 		pages.getHomePage_Mobile().navigateBackToHomeScreen();
+		log.info("Completed executing TC03_ToSet_ClipboardText_Test Test");
 
 	}
 }

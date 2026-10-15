@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="The Mobile App Test Suite">
+	<test name="Functional Test">
+		<classes>
+			<class name="com.unitestx.tests.mobile.TC04_WebViewDemo_Test" />
+			<class
+				name="com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test" />
+			<class
+				name="com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test" />
+			<class name="com.unitestx.tests.mobile.TC02_EchoBox_Input_Test" />
+			<class
+				name="com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test" />
+			<class
+				name="com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test" />
+			<class name="com.unitestx.tests.mobile.TC01_LoginDemoTest" />
+			<class name="com.unitestx.tests.mobile.TC08_DatePickerDemo_Test" />
+		</classes>
+	</test> <!--
+	Functional Test -->
+</suite> <!--
+The Mobile App Test Suite -->

@@ -92,6 +92,7 @@ public class ListDemoPage_mobile {
 			WebElement successMsg = MobileAutomationUtils.findElement(messageXpath);
 			String actualTxt = MobileAutomationUtils.getTextByXPath(successMsg);
 			Assert.assertTrue(actualTxt.toLowerCase().contains("congratulations"));
+			MobileAutomationUtils.takescreenshot_And_AppendTo_Path();
 			MobileAutomationUtils.clickElement(okBtn);
 		} catch (Exception e) {
 			log.error("Failed to verify option selection", e);

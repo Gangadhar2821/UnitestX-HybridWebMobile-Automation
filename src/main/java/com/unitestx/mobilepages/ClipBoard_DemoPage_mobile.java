@@ -61,6 +61,7 @@ public class ClipBoard_DemoPage_mobile {
 			String clipBoardTxt = MobileAutomationUtils.getTextByXPath(clipBoardText);
 			Assert.assertEquals(clipBoardTxt, str, "Clipboard Text is not same as the expected text");
 			log.info("Clipboard text: " + clipBoardTxt);
+			MobileAutomationUtils.takescreenshot_And_AppendTo_Path();
 		} catch (Exception e) {
 			log.error("Failed to verify the text set to the clipboard", e);
 			throw new RuntimeException(e.getMessage());

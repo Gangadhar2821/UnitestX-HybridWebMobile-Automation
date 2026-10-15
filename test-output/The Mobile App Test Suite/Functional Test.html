@@ -1,0 +1,243 @@
+<html>
+<head>
+<title>TestNG:  Functional Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Functional Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Oct 15 16:41:30 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>125 seconds (125828 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test.selectOption()'><b>selectOption</b><br>Test class: com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test</td>
+<td><div><pre>java.lang.RuntimeException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [48963ae9-b4c8-48e9-8c8f-eee4138c372e, getElementText {id=00000000-0000-0145-ffff-ffff0000009a}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (48963ae9-b4c8-48e9-8c8f-eee4138c372e)] -&gt; xpath: //android.widget.ScrollView//android.widget.TextView]
+Session ID: 48963ae9-b4c8-48e9-8c8f-eee4138c372e
+	at com.unitestx.mobilepages.ListDemoPage_mobile.selectListOption(ListDemoPage_mobile.java:85)
+	at com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test.selectOption(TC05_ToSelectListOptionDemo_Test.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2043313130", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2043313130'><pre>java.lang.RuntimeException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.23.0&apos;, revision: &apos;4df0a231af&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [48963ae9-b4c8-48e9-8c8f-eee4138c372e, getElementText {id=00000000-0000-0145-ffff-ffff0000009a}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (48963ae9-b4c8-48e9-8c8f-eee4138c372e)] -&gt; xpath: //android.widget.ScrollView//android.widget.TextView]
+Session ID: 48963ae9-b4c8-48e9-8c8f-eee4138c372e
+	at com.unitestx.mobilepages.ListDemoPage_mobile.selectListOption(ListDemoPage_mobile.java:85)
+	at com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test.selectOption(TC05_ToSelectListOptionDemo_Test.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>20</td>
+<td>com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test@fa4c865</td></tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test.fetchGeoLocationDemo()'><b>fetchGeoLocationDemo</b><br>Test class: com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test</td>
+<td><div><pre>java.lang.IllegalArgumentException: @$Proxy30: one of [uiAutomator, accessibility, className, id, tagName, name, xpath, linkText, partialLinkText, iOSClassChain, androidDataMatcher, androidViewMatcher, iOSNsPredicate] should be filled
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.lambda$getFilledValue$4(AppiumByBuilder.java:103)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:102)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:141)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:199)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:93)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:78)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:55)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+	at com.unitestx.mobilepages.GeoLocationDemoPage_mobile.&lt;init&gt;(GeoLocationDemoPage_mobile.java:27)
+	at com.unitestx.pagemanagers.MobilePageManager.getGeoLocationDemoPage_mobile(MobilePageManager.java:84)
+	at com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test.fetchGeoLocationDemo(TC07_Fetch_GeoLoactaionDemo_Test.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1128198660", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1128198660'><pre>java.lang.IllegalArgumentException: @$Proxy30: one of [uiAutomator, accessibility, className, id, tagName, name, xpath, linkText, partialLinkText, iOSClassChain, androidDataMatcher, androidViewMatcher, iOSNsPredicate] should be filled
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.lambda$getFilledValue$4(AppiumByBuilder.java:103)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.getFilledValue(AppiumByBuilder.java:102)
+	at io.appium.java_client.pagefactory.bys.builder.AppiumByBuilder.createBy(AppiumByBuilder.java:141)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.getBys(DefaultElementByBuilder.java:133)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildMobileNativeBy(DefaultElementByBuilder.java:170)
+	at io.appium.java_client.pagefactory.DefaultElementByBuilder.buildBy(DefaultElementByBuilder.java:199)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:93)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:78)
+	at io.appium.java_client.pagefactory.AppiumElementLocatorFactory.createLocator(AppiumElementLocatorFactory.java:33)
+	at org.openqa.selenium.support.pagefactory.DefaultFieldDecorator.decorate(DefaultFieldDecorator.java:55)
+	at io.appium.java_client.pagefactory.AppiumFieldDecorator.decorate(AppiumFieldDecorator.java:196)
+	at org.openqa.selenium.support.PageFactory.proxyFields(PageFactory.java:109)
+	at org.openqa.selenium.support.PageFactory.initElements(PageFactory.java:101)
+	at com.unitestx.mobilepages.GeoLocationDemoPage_mobile.&lt;init&gt;(GeoLocationDemoPage_mobile.java:27)
+	at com.unitestx.pagemanagers.MobilePageManager.getGeoLocationDemoPage_mobile(MobilePageManager.java:84)
+	at com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test.fetchGeoLocationDemo(TC07_Fetch_GeoLoactaionDemo_Test.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test@3bd82cf5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC02_EchoBox_Input_Test.inputkeys()'><b>inputkeys</b><br>Test class: com.unitestx.tests.mobile.TC02_EchoBox_Input_Test</td>
+<td></td>
+<td>6</td>
+<td>com.unitestx.tests.mobile.TC02_EchoBox_Input_Test@4c178a76</td></tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test.setClipboardTxt()'><b>setClipboardTxt</b><br>Test class: com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test</td>
+<td></td>
+<td>8</td>
+<td>com.unitestx.tests.mobile.TC03_ToSet_ClipboardText_Test@b2c9a9c</td></tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC08_DatePickerDemo_Test.pickDateDemo()'><b>pickDateDemo</b><br>Test class: com.unitestx.tests.mobile.TC08_DatePickerDemo_Test</td>
+<td></td>
+<td>7</td>
+<td>com.unitestx.tests.mobile.TC08_DatePickerDemo_Test@247bddad</td></tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC04_WebViewDemo_Test.navigateToWebPage()'><b>navigateToWebPage</b><br>Test class: com.unitestx.tests.mobile.TC04_WebViewDemo_Test</td>
+<td></td>
+<td>8</td>
+<td>com.unitestx.tests.mobile.TC04_WebViewDemo_Test@65e98b1c</td></tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test.photoviewDemo()'><b>photoviewDemo</b><br>Test class: com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test</td>
+<td></td>
+<td>5</td>
+<td>com.unitestx.tests.mobile.TC06_To_Select_PhotoDemo_Test@2362f559</td></tr>
+<tr>
+<td title='com.unitestx.tests.mobile.TC01_LoginDemoTest.demoLogin()'><b>demoLogin</b><br>Test class: com.unitestx.tests.mobile.TC01_LoginDemoTest</td>
+<td></td>
+<td>10</td>
+<td>com.unitestx.tests.mobile.TC01_LoginDemoTest@544fa968</td></tr>
+</table><p>
+</body>
+</html>

@@ -974,3 +974,269 @@ java.lang.RuntimeException: Failed to click on mobile element after 5 attempts:
 2026-10-09 14:59:41 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
 2026-10-09 14:59:42 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
 2026-10-09 14:59:43 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 14:58:55 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 14:59:11 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 14:59:11 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 14:59:16 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 14:59:17 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 14:59:18 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 14:59:18 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 14:59:47 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 14:59:58 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 14:59:58 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:00:14 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 15:00:16 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 15:00:17 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 15:27:17 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:27:22 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:27:22 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:28:02 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:28:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:28:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:31:47 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:31:52 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:31:52 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:31:58 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 15:31:59 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 15:31:59 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 15:33:44 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:33:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:33:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:33:56 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 15:33:56 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 15:33:56 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 15:36:08 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:36:14 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:36:14 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:39:39 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 15:39:40 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 15:39:40 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 15:41:31 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:41:37 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:41:37 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:41:44 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 15:41:45 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 15:41:46 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 15:43:09 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:43:14 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:43:14 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:44:05 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 15:44:05 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 15:44:06 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 15:50:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 15:50:35 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 15:50:35 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 15:50:41 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 15:50:42 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 15:50:42 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 16:04:00 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 16:04:10 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:04:10 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:04:14 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:04:15 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:04:15 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 16:06:26 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 16:06:31 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:06:31 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:06:34 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:06:34 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:06:34 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 16:27:00 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 16:27:06 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:27:06 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:27:14 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:27:15 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:27:15 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 16:27:15 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 16:31:06 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 16:31:11 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:31:11 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:31:24 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:31:25 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:31:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:31:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:31:36 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:31:36 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:31:41 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:31:41 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:31:46 [main] INFO  com.unitestx.utils.LoggerUtil - Clipboard text: Krishna
+2026-10-15 16:31:48 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:31:49 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:31:54 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:31:54 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:31:58 [main] INFO  com.unitestx.utils.LoggerUtil - Message Text: PrimeHub
+2026-10-15 16:32:01 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:32:01 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:32:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:32:07 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:32:18 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:32:19 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:32:24 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:32:24 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:32:27 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:32:28 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:32:34 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:32:34 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:32:41 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-15 16:32:44 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:32:45 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:32:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:32:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:32:59 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:32:59 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:33:01 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 16:34:10 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 16:34:15 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:34:15 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:35:49 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-15 16:35:52 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:35:52 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:35:53 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server
+2026-10-15 16:41:30 [main] INFO  com.unitestx.utils.LoggerUtil - Started the Appium server!
+2026-10-15 16:41:35 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:41:35 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:41:35 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC04_WebViewDemo_Test Test
+2026-10-15 16:41:43 [main] INFO  com.unitestx.utils.LoggerUtil - Completed executing TC04_WebViewDemo_Test Test
+2026-10-15 16:41:44 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:41:45 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:41:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:41:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:41:50 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC06_To_Select_PhotoDemo_Test Test
+2026-10-15 16:41:55 [main] INFO  com.unitestx.utils.LoggerUtil - Completed executing TC06_To_Select_PhotoDemo_Test Test
+2026-10-15 16:41:55 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:41:56 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:42:01 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:42:01 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:42:01 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC03_ToSet_ClipboardText_Test Test
+2026-10-15 16:42:07 [main] INFO  com.unitestx.utils.LoggerUtil - Clipboard text: Saanvi
+2026-10-15 16:42:09 [main] INFO  com.unitestx.utils.LoggerUtil - Completed executing TC03_ToSet_ClipboardText_Test Test
+2026-10-15 16:42:09 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:42:10 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:42:15 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:42:15 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:42:15 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC02_EchoBox_Input_Test Test
+2026-10-15 16:42:20 [main] INFO  com.unitestx.utils.LoggerUtil - Message Text: CloudLink
+2026-10-15 16:42:21 [main] INFO  com.unitestx.utils.LoggerUtil - Completed executing TC02_EchoBox_Input_Test Test
+2026-10-15 16:42:22 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:42:23 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:42:29 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:42:29 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:42:29 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC05_ToSelectListOptionDemo_Test Test
+2026-10-15 16:42:50 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to capture all the options
+org.openqa.selenium.StaleElementReferenceException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [48963ae9-b4c8-48e9-8c8f-eee4138c372e, getElementText {id=00000000-0000-0145-ffff-ffff0000009a}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (48963ae9-b4c8-48e9-8c8f-eee4138c372e)] -> xpath: //android.widget.ScrollView//android.widget.TextView]
+Session ID: 48963ae9-b4c8-48e9-8c8f-eee4138c372e
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190) ~[selenium-remote-driver-4.23.0.jar:?]
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237) ~[java-client-9.2.2.jar:?]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223) ~[selenium-remote-driver-4.23.0.jar:?]
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191) ~[selenium-remote-driver-4.23.0.jar:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at com.unitestx.mobilepages.ListDemoPage_mobile.captureAllOptions(ListDemoPage_mobile.java:54) ~[classes/:?]
+	at com.unitestx.mobilepages.ListDemoPage_mobile.selectListOption(ListDemoPage_mobile.java:75) ~[classes/:?]
+	at com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test.selectOption(TC05_ToSelectListOptionDemo_Test.java:16) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-10-15 16:42:50 [main] ERROR com.unitestx.utils.LoggerUtil - Failed to perform option selection
+java.lang.RuntimeException: androidx.test.uiautomator.StaleObjectException
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.23.0', revision: '4df0a231af'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [48963ae9-b4c8-48e9-8c8f-eee4138c372e, getElementText {id=00000000-0000-0145-ffff-ffff0000009a}]
+Capabilities {appium:adbExecTimeout: 60000, appium:app: D:\Eclipse - Workspace\UniT..., appium:appActivity: com.appiumpro.the_app.MainA..., appium:appPackage: com.appiumpro.the_app, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, app: D:\Eclipse - Workspace\UniT..., autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Gangadhar, newCommandTimeout: 600, noReset: true, platformName: ANDROID, resetKeyboard: true, uiautomator2ServerInstallTimeout: 60000, uiautomator2ServerLaunchTimeout: 60000, unicodeKeyboard: true}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 420, appium:deviceScreenSize: 1080x2424, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 600, appium:noReset: true, appium:pixelRatio: 2.625, appium:platformVersion: 16, appium:resetKeyboard: true, appium:statBarHeight: 137, appium:takesScreenshot: true, appium:uiautomator2ServerInstallTimeout: 60000, appium:uiautomator2ServerLaunchTimeout: 60000, appium:unicodeKeyboard: true, appium:viewportRect: {height: 2287, left: 0, top: 137, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Element: [[AndroidDriver:  on ANDROID (48963ae9-b4c8-48e9-8c8f-eee4138c372e)] -> xpath: //android.widget.ScrollView//android.widget.TextView]
+Session ID: 48963ae9-b4c8-48e9-8c8f-eee4138c372e
+	at com.unitestx.mobilepages.ListDemoPage_mobile.captureAllOptions(ListDemoPage_mobile.java:67) ~[classes/:?]
+	at com.unitestx.mobilepages.ListDemoPage_mobile.selectListOption(ListDemoPage_mobile.java:75) ~[classes/:?]
+	at com.unitestx.tests.mobile.TC05_ToSelectListOptionDemo_Test.selectOption(TC05_ToSelectListOptionDemo_Test.java:16) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154) ~[testng-7.10.2.jar:7.10.2]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134) ~[testng-7.10.2.jar:7.10.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:739) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestRunner.run(TestRunner.java:614) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.10.2.jar:7.10.2]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.runSuites(TestNG.java:1112) [testng-7.10.2.jar:7.10.2]
+	at org.testng.TestNG.run(TestNG.java:1079) [testng-7.10.2.jar:7.10.2]
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+2026-10-15 16:42:51 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:42:51 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:42:58 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:42:58 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:42:58 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC07_Fetch_GeoLoactaionDemo_Test Test
+2026-10-15 16:43:02 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:43:03 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:43:09 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:43:09 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:43:09 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC01_LoginDemoTest Test
+2026-10-15 16:43:17 [main] INFO  com.unitestx.utils.LoggerUtil - Invalid login credentials, please try again
+2026-10-15 16:43:19 [main] INFO  com.unitestx.utils.LoggerUtil - Completed executing TC01_LoginDemoTest Test
+2026-10-15 16:43:20 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:43:20 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:43:27 [main] INFO  com.unitestx.utils.LoggerUtil - Started the AndroidDriver!
+2026-10-15 16:43:27 [main] INFO  com.unitestx.utils.LoggerUtil - Started Test Execution
+2026-10-15 16:43:27 [main] INFO  com.unitestx.utils.LoggerUtil - Started executing TC08_DatePickerDemo_Test Test
+2026-10-15 16:43:34 [main] INFO  com.unitestx.utils.LoggerUtil - Completed executing TC08_DatePickerDemo_Test Test
+2026-10-15 16:43:35 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Application: com.appiumpro.the_app
+2026-10-15 16:43:36 [main] INFO  com.unitestx.utils.LoggerUtil - Terminated the Android driver!
+2026-10-15 16:43:36 [main] INFO  com.unitestx.utils.LoggerUtil - Killed the Appium server

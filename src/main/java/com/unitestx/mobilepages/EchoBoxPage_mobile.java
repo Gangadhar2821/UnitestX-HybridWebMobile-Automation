@@ -65,8 +65,9 @@ public class EchoBoxPage_mobile {
 			if (savedMsgg != null) {
 				Assert.assertEquals(savedMsgg, randomString, "Failed to verify saved Message");
 				log.info("Message Text: " + savedMsgg);
+				MobileAutomationUtils.takescreenshot_And_AppendTo_Path();
 			} else {
-				log.warn("Please sapecify the expected message to verify the saved Text");
+				log.warn("Please specify the expected message to verify the saved Text");
 			}
 
 		} catch (Exception e) {

@@ -11,10 +11,12 @@ public class TC04_WebViewDemo_Test extends BaseTest_Mobile {
 
 	@Test
 	public void navigateToWebPage() {
+		log.info("Started executing TC04_WebViewDemo_Test Test");
 		pages.getHomePage_Mobile().navigateToWebViewDemoScreen();
 		pages.getWebView_DemoPage_mobile().navigateToSite();
 		pages.getWebView_DemoPage_mobile().verifyWebViewText();
 		pages.getHomePage_Mobile().navigateBackToHomeScreen();
+		log.info("Completed executing TC04_WebViewDemo_Test Test");
 
 	}
 
