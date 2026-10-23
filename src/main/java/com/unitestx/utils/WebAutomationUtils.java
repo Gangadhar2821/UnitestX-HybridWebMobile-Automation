@@ -57,6 +57,16 @@ public class WebAutomationUtils {
 		log = new LoggerUtil();
 	}
 
+	public static void navigateToURL(String url) {
+		try {
+			driver.get(url);
+			log.info("Navigated to URL: " + url);
+		} catch (Exception e) {
+			log.error("Failed to navigate to URL: " + url, e);
+			throw new RuntimeException("Unable to navigate to URL: " + url, e);
+		}
+	}
+
 	public static String getTomorrowDate() {
 		// Define the formatter with the desired pattern
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MMM/yyyy", Locale.ENGLISH);
@@ -142,11 +152,9 @@ public class WebAutomationUtils {
 		return "";
 	}
 
-	public static void click(String xPath) {
+	public static void click(WebElement element) {
 		for (int attempt = 1; attempt <= 3; attempt++) {
 			try {
-				// Wait for element to be visible
-				WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPath)));
 
 				// Scroll into view
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", element);
@@ -154,7 +162,7 @@ public class WebAutomationUtils {
 				// Wait until clickable and click
 				wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 
-				log.info("Clicked on element: " + extractTextFromxPath(xPath) + " button");
+				log.info("Clicked on element:");
 
 				return;
 
@@ -169,15 +177,15 @@ public class WebAutomationUtils {
 
 		// JS fallback if all attempts fail
 		try {
-			WebElement element = driver.findElement(By.xpath(xPath));
+
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
 
-			log.info("Clicked on element using js click: " + extractTextFromxPath(xPath) + " button");
+			log.info("Clicked on element using js click: ");
 
 		} catch (Exception e) {
-			log.error("Click failed for XPath: {}" + xPath, e);
-			throw new RuntimeException("Click failed for XPath: " + xPath, e);
+			log.error("Click failed for XPath: {}", e);
+			throw new RuntimeException("Click failed for XPath:" + e);
 		}
 	}
 
@@ -201,55 +209,58 @@ public class WebAutomationUtils {
 	 * @param elementxPath in type String
 	 * @param data         option to be selected in type String
 	 */
-	public static void handleDynamicDropdown(String elementxPath, String data) {
+	public static void handleDynamicDropdown(WebElement dropdownElement, String data) {
 		try {
-			WebAutomationUtils.click(elementxPath);
-			List<WebElement> allOptions = null;
-			if (allOptions == null) {
-				allOptions = driver.findElements(By.xpath("//div[@role='option']/span"));
-				if (allOptions.isEmpty()) {
-					allOptions = driver.findElements(By.xpath("//span[contains(text(),'" + data + "')]"));
-				}
-				if (allOptions.isEmpty()) {
-					allOptions = driver.findElements(By.xpath("//div[@data-dropdown-panel='true']//button/span"));
-				}
-				if (allOptions.isEmpty()) {
-					List<WebElement> empty = driver
-							.findElements(By.xpath("//div[@data-dropdown-panel='true']//p[text()='No results found']"));
-					if (empty.size() >= 1) {
-						return;
-					}
-				}
-				if (!allOptions.isEmpty()) {
-					for (WebElement ele : allOptions) {
-						String text = ele.getText().trim();
-						if (text.equals(data) || text.contains(data)) {
-							ele.click();
-							break;
-						} else {
-							ele.click();
-							break;
-						}
-					}
-				} else {
+			dropdownElement.click();
+
+			List<WebElement> allOptions = driver.findElements(By.xpath("//div[@role='option']/span"));
+
+			if (allOptions.isEmpty()) {
+				allOptions = driver.findElements(By.xpath("//span[contains(text(),'" + data + "')]"));
+			}
+
+			if (allOptions.isEmpty()) {
+				allOptions = driver.findElements(By.xpath("//div[@data-dropdown-panel='true']//button/span"));
+			}
+
+			if (allOptions.isEmpty()) {
+				List<WebElement> empty = driver
+						.findElements(By.xpath("//div[@data-dropdown-panel='true']//p[text()='No results found']"));
+
+				if (!empty.isEmpty()) {
 					return;
 				}
 			}
+
+			if (!allOptions.isEmpty()) {
+				for (WebElement ele : allOptions) {
+					String text = ele.getText().trim();
+
+					if (text.equalsIgnoreCase(data) || text.contains(data)) {
+						ele.click();
+						return;
+					}
+				}
+
+				// Optional: Select first option if no exact match found
+				allOptions.get(0).click();
+			}
+
 		} catch (Exception e) {
 			log.error("Failed to select the dropdown option", e);
-			throw new RuntimeException(e.getMessage());
+			throw new RuntimeException(e.getMessage(), e);
 		}
 	}
 
 	// Type text into input field with robust handling
-	public static void sendKeys(String xPath, String text) {
-		WebElement element = null;
+	public static void sendKeys(WebElement element, String text) {
+
 		try {
 			try {
-				element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
+				element = wait.until(ExpectedConditions.visibilityOf(element));
 			} catch (Exception e) {
-				scrollToElement(xPath);
-				element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPath)));
+				scrollToElement(element);
+				element = wait.until(ExpectedConditions.visibilityOf(element));
 			}
 
 			try {
@@ -264,14 +275,14 @@ public class WebAutomationUtils {
 			element.sendKeys(text);
 
 		} catch (Exception e) {
-			log.error("SendKeys failed on: " + xPath + " | " + e.getMessage(), e);
+			log.error("SendKeys failed on: " + " | " + e.getMessage(), e);
 		}
 	}
 
 	// Get text from element
 	public static String getText(String xPath) {
 		try {
-			scrollToElement(xPath);
+			scrollToElement(WebAutomationUtils.FindElementByStringXpath(xPath));
 			WebElement element = driver.findElement(By.xpath(xPath));
 			return wait.until(ExpectedConditions.visibilityOf(element)).getText();
 		} catch (Exception e) {
@@ -322,7 +333,7 @@ public class WebAutomationUtils {
 	// Get attribute value
 	public static String getAttribute(String xPath, String attribute) {
 		try {
-			scrollToElement(xPath);
+			scrollToElement(WebAutomationUtils.FindElementByStringXpath(xPath));
 			WebElement element = driver.findElement(By.xpath(xPath));
 			return element.getAttribute(attribute);
 		} catch (Exception e) {
@@ -335,7 +346,7 @@ public class WebAutomationUtils {
 		String value = null;
 		try {
 			Properties properties = new Properties();
-			FileReader file = new FileReader(System.getProperty("user.dir") + "\\configs\\glowconfig.properties");
+			FileReader file = new FileReader(System.getProperty("user.dir") + "\\configs\\app.properties");
 			properties.load(file);
 			value = properties.getProperty(key);
 		} catch (Exception e) {
@@ -348,7 +359,7 @@ public class WebAutomationUtils {
 		String value = null;
 		try {
 			Properties properties = new Properties();
-			FileReader file = new FileReader(System.getProperty("user.dir") + "\\configs\\glowruntimedata.properties");
+			FileReader file = new FileReader(System.getProperty("user.dir") + "\\configs\\appruntimedata.properties");
 			properties.load(file);
 			value = properties.getProperty(key);
 		} catch (Exception e) {
@@ -417,15 +428,15 @@ public class WebAutomationUtils {
 		}
 	}
 
-	public static void scrollToElement(String xpath) {
+	public static void scrollToElement(WebElement element) {
 		try {
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-			WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(xpath)));
+			element = wait.until(ExpectedConditions.visibilityOf(element));
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
 
 		} catch (Exception e) {
-			log.error("Scroll failed for xpath: " + xpath + " | Error: ", e);
+			log.error("Scroll failed for xpath: " + " | Error: ", e);
 		}
 	}
 
@@ -549,7 +560,7 @@ public class WebAutomationUtils {
 	 * @param calenderIcon xpath in String
 	 * @param date         in the format of DD/MMM/YYYY eg: 09/Oct/2026
 	 */
-	public static void handleCalender(String calenderIcon, String date) {
+	public static void handleCalender(WebElement calenderIcon, String date) {
 		try {
 			String yearBtn = "//button[contains(text(),'20')]";
 			String monthBtn = "//button[contains(text(),'20')]/parent::div/preceding-sibling::div/button";
@@ -562,7 +573,7 @@ public class WebAutomationUtils {
 			String yeardata = split[2];
 
 			// picking year
-			WebAutomationUtils.click(yearBtn);
+			WebAutomationUtils.click(WebAutomationUtils.FindElementByStringXpath(yeardata));
 			List<WebElement> years = driver.findElements(By.xpath(yearOpts));
 			for (WebElement ele : years) {
 				String actualyear = ele.getText().trim();
@@ -573,7 +584,7 @@ public class WebAutomationUtils {
 			}
 
 			// picking month
-			WebAutomationUtils.click(monthBtn);
+			WebAutomationUtils.click(WebAutomationUtils.FindElementByStringXpath(monthBtn));
 			List<WebElement> months = driver.findElements(By.xpath(monthOpts));
 			for (WebElement ele : months) {
 				String actualMonth = ele.getText().trim();
@@ -584,7 +595,7 @@ public class WebAutomationUtils {
 			}
 
 			// selecting date
-			WebAutomationUtils.click("//button[text()='" + daydata + "']");
+			WebAutomationUtils.click(WebAutomationUtils.FindElementByStringXpath("//button[text()='" + daydata + "']"));
 
 		} catch (Exception e) {
 			log.error("Failed to handle calender input", e);

@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test">
+      <class name="com.unitestx.tests.web.TC01_Webapp_Login_Test">
         <methods>
-          <include name="configuration"/>
-          <include name="startServer"/>
-          <include name="fetchGeoLocationDemo"/>
-          <include name="Teardown"/>
-          <include name="killAppiumserver"/>
+          <include name="setupWeb"/>
+          <include name="login"/>
+          <include name="tearDownWeb"/>
         </methods>
-      </class> <!-- com.unitestx.tests.mobile.TC07_Fetch_GeoLoactaionDemo_Test -->
+      </class> <!-- com.unitestx.tests.web.TC01_Webapp_Login_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

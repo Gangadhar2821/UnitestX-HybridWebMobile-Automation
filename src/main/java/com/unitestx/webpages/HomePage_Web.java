@@ -19,25 +19,6 @@ public class HomePage_Web {
 		this.log = new LoggerUtil();
 	}
 
-	// Homepage Locators
-	private String logoutBtn = "//button[text()='Logout']";
 
-
-	
-
-	
-
-
-
-
-	public void logoutWebApp() {
-		try {
-			WebAutomationUtils.click(logoutBtn);
-			WebAutomationUtils.verifyLandingPage();
-		} catch (Exception e) {
-			log.error("Error occoured during the Logout", e);
-			throw new RuntimeException("Failed to Logout of the Application");
-		}
-	}
 
 }
