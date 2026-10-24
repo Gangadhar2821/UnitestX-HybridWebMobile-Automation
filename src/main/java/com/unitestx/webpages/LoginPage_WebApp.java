@@ -45,6 +45,9 @@ public class LoginPage_WebApp {
 			WebAutomationUtils.sendKeys(userNameTxtField, "Admin");
 			WebAutomationUtils.sendKeys(passwordTxtField, "admin123");
 			WebAutomationUtils.click(loginButton);
+			String url = driver.getCurrentUrl().toLowerCase();
+			Assert.assertTrue(url.contains("dashboard"));
+
 		} catch (Exception e) {
 			log.error("Failed to login", e);
 			throw new RuntimeException(e.getMessage());
